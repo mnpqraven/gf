@@ -20,7 +20,7 @@ Enemy settings: Boss, EVA 30
 
 DPS values are relative to each other, not to be interpreted directly in DD ranking map against mobs
 
-\begin{tabular}{| c || c || c | c ||
+\hspace*{-1cm}\begin{tabular}{| c || c || c | c ||
 l | l | l | l | l ||
 r || l |}
 \hline
@@ -37,4 +37,5 @@ r || l |}
 9  & \cellcolor{lavender}MG    & 40k & 82k  & PKP    & M1919 & MG5   & Mk23     & M37      & Para 40/10 MG   & general 3    \\ \hline
 10 & \cellcolor{light-gray}MG  & 31k & 88k  & Negev  & BAR   & MG5   & Conten.  & KSG      & Armor 40/4      & Garm         \\ \hline
 \end{tabular}
+\hspace*{-1cm}
 

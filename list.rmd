@@ -1,7 +1,7 @@
 ---
 title: Othi's Doll Index
 author: Othi
-output: pdf_document
+output: [html_document, pdf_document]
 header-includes:
     - \usepackage{multirow,array,colortbl,graphicx,cellspace,xcoffins,caption}
     - \usepackage[dvipsnames]{xcolor}
@@ -13,7 +13,6 @@ header-includes:
 \newcommand{\rSan}{\cellcolor{Cyan}}
 \newcommand{\rShi}{\cellcolor{LimeGreen}}
 \newcommand{\rGo}{\cellcolor{Dandelion}}
-\newcolumntype{V}{>{\centering\arraybackslash} m{10pt} }
 
 \newcommand{\ring}{\cellcolor{White}\raisebox{-.25\height}{\includegraphics[width=10pt]{img/ring.png}}}
 \tableofcontents

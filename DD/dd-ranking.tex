@@ -1,0 +1,127 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Muh gay DD teams},
+            pdfauthor={Othi},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\providecommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Muh gay DD teams}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{Othi}
+    \preauthor{\centering\large\emph}
+  \postauthor{\par}
+    \date{}
+    \predate{}\postdate{}
+  
+\usepackage{xparse}
+\usepackage{xcolor,colortbl}
+\usepackage{listings}
+
+\begin{document}
+\maketitle
+
+\definecolor{light-gray}{gray}{0.6}
+\definecolor{light-green}{RGB}{144,210,144}
+\definecolor{orange}{RGB}{255,153,51}
+\definecolor{light-red}{RGB}{255,51,51}
+\definecolor{lavender}{RGB}{153,153,255}
+\NewDocumentCommand{\codeword}{v}{\colorbox{light-gray}{\texttt{\textcolor{blue}{#1}}}}
+
+\newcommand{\inlinecode}{\texttt}
+
+Enemy settings: Boss, EVA 30
+
+DPS values are relative to each other, not to be interpreted directly in
+DD ranking map against mobs
+
+\hspace*{-1cm}\begin{tabular}{| c || c || c | c ||
+l | l | l | l | l ||
+r || l |}
+\hline
+\multicolumn{2}{|c||}{$\#$} &
+\multicolumn{2}{|c||}{DPS 8/20s} &            Pos.7  & Pos.4 & Pos.1 & Offtank  & Maintank & Fairy LV/SLV    & Comment      \\ \hline \hline
+1  & \cellcolor{light-green}AR & 51k & 133k & G36    & M4A1  & G11   & Skorpion & RO635    & Warrior 70/6    & general 1    \\ \hline
+2  & \cellcolor{light-red}AR   & 38k & 108k & G11    & K5    & RFB   & G36c     & UMP45    & Taunt 50/9      & 1st boss/Jup \\ \hline
+3  & \cellcolor{light-red}AR   & 50k & 121k & G11    & AR-15 & K2    & K5       & T79      & Taunt 50/9      & 2nd boss/Jup \\ \hline
+4  & \cellcolor{light-green}AR & 43k & 108k & T64    & Grizz & G11   & Vector   & UMP9     & Fury 50/3       & general 2    \\ \hline
+5  & \cellcolor{orange}RF      & 55k & 166k & WA2000 & 5-7   & SVD   & PPK      & Welrod   & Airstrike 30/8  & jäeger       \\ \hline
+6  & \cellcolor{orange}RF      & 56k & 175k & WA2000 & 5-7   & SVD   & Mk23     & Welrod   & Airstrike 70/7  & jäeger       \\ \hline
+7  & \cellcolor{lavender}MG    & 36k & 86k  & M2HB   & Colt  & PK    & Grizz    & Elphelt  & Para 30/10 DMG1 & TopLeft heli \\ \hline
+8  & \cellcolor{lavender}MG    & 35k & 72k  & MG5    & LWMMG & PK    & MP-446   & CptChina & Para 70/10 DMG2 & BotLeft heli \\ \hline
+9  & \cellcolor{lavender}MG    & 40k & 82k  & PKP    & M1919 & MG5   & Mk23     & M37      & Para 40/10 MG   & general 3    \\ \hline
+10 & \cellcolor{light-gray}MG  & 31k & 88k  & Negev  & BAR   & MG5   & Conten.  & KSG      & Armor 40/4      & Garm         \\ \hline
+\end{tabular}
+\hspace*{-1cm}
+
+
+\end{document}
