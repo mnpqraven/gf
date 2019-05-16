@@ -12,9 +12,7 @@ output: pdf_document
 \definecolor{orange}{RGB}{255,153,51}
 \definecolor{light-red}{RGB}{255,51,51}
 \definecolor{lavender}{RGB}{153,153,255}
-\NewDocumentCommand{\codeword}{v}{%
-\colorbox{light-gray}{%
-\texttt{\textcolor{blue}{#1}}}}
+\NewDocumentCommand{\codeword}{v}{\colorbox{light-gray}{\texttt{\textcolor{blue}{#1}}}}
 
 \newcommand{\inlinecode}{\texttt}
 
