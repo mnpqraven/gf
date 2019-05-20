@@ -35,141 +35,147 @@ output:
 ## AR & SMG
 \begin{tabular}[t]{>{\stepcounter{rownum1}\arabic{rownum1}} r | V | p{120pt}|l|l}
 \multicolumn{2}{c}{No.} & Name & Lv & SLv\\ \hline
-  &        & \rShi M16A1 & 100 & 8 \\
-  & \ring  & \rShi M4A1 & 100 & 10  \\
-  &        & \rShi M4 SOPMOD II & 100 & 10 \\
-  & \ring  & \rShi ST-AR15 & 100 & 10 \\
-  &        & \rGo G41  & 100 & 10  \\
-  &        & \rShi G36  & 1 & 1  \\
-  & \ring  & \rShi G36  & 100 & 10  \\
-  &        & \rGo 416  & 100 & 10  \\
-  &        & \rSan FNC  & 100 & 8  \\
-  &        & \rShi TAR-21  & 100 & 10  \\
-  &        & \rGo FAL  & 100 & 10  \\
-  &        & \rGo FAL  & 100 & 10  \\
-  & \ring  & \rShi 9A-91  & 100 & 10  \\
-  & \ring  & \rGo OTs-14 & 100 & 10  \\
-  &        & \rGo G11   & 9x & 6 \\
-  &        & \rGo G11   & 100 & 10 \\
-  &        & \rGo G11   & 100 & 10 \\
-  &        & \rGo G11   & 100 & 10 \\
-  &        & \rGo G11   & 100 & 10 \\
-  &        & \rGo T95   & 100 & 10 \\
-  &        & \rGo T97   & 100 & 10 \\
-  &        & \rGo RFB   & 100 & 10 \\
-  &        & \rGo ART556 & 100 & 10 \\
-  &        & \rGo K2   & 100 & 10 \\
-  &        & \rGo Zas M21 & 9x & 1 \\
-  &        & \rGo Zas M21 & 9x & 1 \\
-  &        & \rGo Howa Type 64 & 100 & 10 \\
+   &        & \rShi M16A1 & 100 & 8
+\\ & \ring  & \rShi M4A1 & 100 & 10
+\\ &        & \rShi M4 SOPMOD II & 100 & 10
+\\ & \ring  & \rShi ST-AR15 & 100 & 10
+\\ &        & \rGo G41  & 100 & 10
+\\ &        & \rShi G36  & 1 & 1
+\\ & \ring  & \rShi G36  & 100 & 10
+\\ &        & \rGo 416  & 100 & 10
+\\ &        & \rSan FNC  & 100 & 8
+\\ &        & \rShi TAR-21  & 100 & 10
+\\ &        & \rGo FAL  & 100 & 10
+\\ &        & \rGo FAL  & 100 & 10
+\\ & \ring  & \rShi 9A-91  & 100 & 10
+\\ & \ring  & \rGo OTs-14 & 100 & 10
+\\ &        & \rGo OTs-14 & 1 & 1
+\\ &        & \rGo OTs-14 & 1 & 1
+\\ &        & \rGo OTs-14 & 1 & 1
+\\ &        & \rGo OTs-14 & 1 & 1
+\\ &        & \rGo OTs-14 & 1 & 1
+\\ &        & \rGo OTs-14 & 1 & 1
+\\ &        & \rGo G11   & 9x & 6
+\\ &        & \rGo G11   & 100 & 10
+\\ &        & \rGo G11   & 100 & 10
+\\ &        & \rGo G11   & 100 & 10
+\\ &        & \rGo G11   & 100 & 10
+\\ &        & \rGo T95   & 100 & 10
+\\ &        & \rGo T97   & 100 & 10
+\\ &        & \rGo RFB   & 100 & 10
+\\ &        & \rGo ART556 & 100 & 10
+\\ &        & \rGo K2   & 100 & 10
+\\ &        & \rGo Zas M21 & 9x & 1
+\\ &        & \rGo Zas M21 & 9x & 1
+\\ &        & \rGo Howa Type 64 & 100 & 10
 \end{tabular}
 \quad
 \begin{tabular}[t]{>{\stepcounter{rownum2}\arabic{rownum2}} r | V | p{120pt}|l|l}
 \multicolumn{2}{c}{No.} & Name & Lv & SLv\\ \hline
-  &        & \rGo Thompson & 100 & 1 \\
-  &        & \rSan Ingram & 100 & 7  \\
-  & \ring  & \rGo Vector & 100 & 10  \\
-  &        & \rSan PPS-43 & 100 & 5 \\
-  & \ring  & \rSan Skorpion & 100 & 10  \\
-  &        & \rShi UMP9 & 100 & 9 \\
-  &        & \rShi UMP45 & 100 & 10 \\
-  &        & \rGo G36c & 100 & 10 \\
-  &        & \rGo Suomi & 3x & 1 \\
-  &        & \rSan Z-62 & 100 & 9 \\
-  & \ring  & \rGo Type 79 & 100 & 10  \\
-  &        & \rGo SR-3MP & 100 & 10 \\
-  &        & \rGo RO635 & 100 & 10 \\
-  &        & \rSan SCW & 1 & 5 \\
-  &        & \rGo PM-06 & 3x & 1 \\
-  &        & \rGo Type 100 & 4x & 1 \\
+    &        & \rGo Thompson & 100 & 1
+\\  &        & \rSan Ingram & 100 & 7
+\\  & \ring  & \rGo Vector & 100 & 10
+\\  &        & \rSan PPS-43 & 100 & 5
+\\  & \ring  & \rSan Skorpion & 100 & 10
+\\  &        & \rShi UMP9 & 100 & 9
+\\  &        & \rShi UMP45 & 100 & 10
+\\  &        & \rGo G36c & 100 & 10
+\\  &        & \rGo Suomi & 3x & 1
+\\  &        & \rSan Z-62 & 100 & 9
+\\  & \ring  & \rGo Type 79 & 100 & 10
+\\  &        & \rGo SR-3MP & 100 & 10
+\\  &        & \rGo RO635 & 100 & 10
+\\  &        & \rSan SCW & 1 & 5
+\\  &        & \rGo PM-06 & 3x & 1
+\\  &        & \rGo Type 100 & 4x & 1
 \end{tabular}
 \pagebreak
 
 ## RF & HG
 \begin{tabular}[t]{>{\stepcounter{rownum3}\arabic{rownum3}} r | V | p{120pt}|l|l}
 \multicolumn{2}{c}{No.} & Name & Lv & SLv\\ \hline
-  &        & \rShi Springfield & 100 & 7  \\
-  &        & \rSan M14 & 100 & 10  \\
-  &        & \rShi Mosin Nagant & 100 & 9  \\
-  &        & \rShi PTRD & 100 & 1  \\
-  & \ring  & \rShi SVD & 100 & 10  \\
-  &        & \rShi SVD & 100 & 10  \\
-  &        & \rSan SV-98 & 7x & 1  \\
-  &        & \rNi G43 & 7x & 1  \\
-  &        & \rGo WA2000 & 100 & 10  \\
-  &        & \rGo WA2000 & 100 & 10  \\
-  &        & \rGo Lee-Enfield & 100 & 10  \\
-  &        & \rGo NTW-20 & 9x & 1  \\
-  &        & \rGo M99 & 7x & 1  \\
-  &        & \rShi G28 & 6x & 8  \\
-  &        & \rGo Carcano M1891 & 3x & 1  \\
+    &        & \rShi Springfield & 100 & 7
+\\  &        & \rSan M14 & 100 & 10
+\\  &        & \rShi Mosin Nagant & 100 & 9
+\\  &        & \rShi PTRD & 100 & 1
+\\  & \ring  & \rShi SVD & 100 & 10
+\\  &        & \rShi SVD & 100 & 10
+\\  &        & \rSan SV-98 & 7x & 1
+\\  &        & \rNi G43 & 7x & 1
+\\  &        & \rGo WA2000 & 100 & 10
+\\  &        & \rGo WA2000 & 100 & 10
+\\  &        & \rGo Lee-Enfield & 100 & 10
+\\  &        & \rGo NTW-20 & 9x & 1
+\\  &        & \rGo M99 & 7x & 1
+\\  &        & \rShi G28 & 6x & 8
+\\  &        & \rGo Carcano M1891 & 3x & 1
 \end{tabular}
 \quad
 \begin{tabular}[t]{>{\stepcounter{rownum4}\arabic{rownum4}} r | V | p{120pt}|l|l}
 \multicolumn{2}{c}{No.} & Name & Lv & SLv\\ \hline
-  &        & \rShi Colt SAA & 1 & 1  \\
-  &        & \rShi Colt SAA & 100 & 6  \\
-  &        & \rNi M1911 & 100 & 1  \\
-  &        & \rSan M9 & 100 & 10  \\
-  &        & \rNi Nagant Revolver & 100 & 1  \\
-  &        & \rShi Stechkin & 100 & 8  \\
-  &        & \rShi Stechkin & 100 & 1  \\
-  &        & \rSan Makarov & 100 & 8  \\
-  &        & \rNi PPK & 100 & 8  \\
-  &        & \rNi MP-446 & 100 & 5  \\
-  &        & \rGo Grizzly & 100 & 10  \\
-  &        & \rGo Grizzly & 100 & 1  \\
-  &        & \rGo Grizzly & 1 & 1  \\
-  &        & \rGo Calico & 100 & 10  \\
-  &        & \rGo Calico & 100 & 8  \\
-  &        & \rShi Mk23 & 100 & 10  \\
-  &        & \rShi Mk23 & 100 & 1  \\
-  &        & \rGo Welrod & 100 & 10  \\
-  &        & \rGo Welrod & 100 & 10  \\
-  & \ring  & \rGo Welrod & 100 & 10 \\
-  &        & \rGo Welrod & 100 & 10  \\
-  &        & \rGo Welrod & 100 & 10  \\
-  &        & \rGo NZ75 & 100 & 8  \\
-  &        & \rSan Type59 & 2x & 1  \\
-  &        & \rGo Five-Seven & 100 & 10  \\
-  &        & \rGo Five-Seven & 8x & 7  \\
-  &        & \rGo Five-Seven & 100 & 8  \\
-  &        & \rGo CZ75 & 100 & 6  \\
-  & \ring  & \rGo Contender & 100 & 10 \\
-  &        & \rShi K5 & 100 & 10  \\
-  &        & \rShi K5 & 100 & 10  \\
-  &        & \rIchi Noel & 100 & 4  \\
+    &        & \rShi Colt SAA & 1 & 1
+\\  &        & \rShi Colt SAA & 100 & 6
+\\  &        & \rNi M1911 & 100 & 1
+\\  &        & \rSan M9 & 100 & 10
+\\  &        & \rNi Nagant Revolver & 100 & 1
+\\  &        & \rShi Stechkin & 100 & 8
+\\  &        & \rShi Stechkin & 100 & 1
+\\  &        & \rSan Makarov & 100 & 8
+\\  &        & \rNi PPK & 100 & 8
+\\  &        & \rNi MP-446 & 100 & 5
+\\  &        & \rGo Grizzly & 100 & 10
+\\  &        & \rGo Grizzly & 100 & 1
+\\  &        & \rGo Grizzly & 1 & 1
+\\  &        & \rGo Calico & 100 & 10
+\\  &        & \rGo Calico & 100 & 8
+\\  &        & \rShi Mk23 & 100 & 10
+\\  &        & \rShi Mk23 & 100 & 1
+\\  &        & \rGo Welrod & 100 & 10
+\\  &        & \rGo Welrod & 100 & 10
+\\  & \ring  & \rGo Welrod & 100 & 10
+\\  &        & \rGo Welrod & 100 & 10
+\\  &        & \rGo Welrod & 100 & 10
+\\  &        & \rGo NZ75 & 100 & 8
+\\  &        & \rSan Type59 & 2x & 1
+\\  &        & \rGo Five-Seven & 100 & 10
+\\  &        & \rGo Five-Seven & 8x & 7
+\\  &        & \rGo Five-Seven & 100 & 8
+\\  &        & \rGo CZ75 & 100 & 6
+\\  & \ring  & \rGo Contender & 100 & 10
+\\  &        & \rShi K5 & 100 & 10
+\\  &        & \rShi K5 & 100 & 10
+\\  &        & \rIchi Noel & 100 & 4
 \end{tabular}
 \pagebreak
 
 ## MG & SG
 \begin{tabular}[t]{>{\stepcounter{rownum5}\arabic{rownum5}} r | V | p{120pt}|l|l}
 \multicolumn{2}{c}{No.} & Name & Lv & SLv\\ \hline
-  &        & \rShi BAR & 100 & 6  \\
-  &        & \rSan M2HB & 100 & 10  \\
-  &        & \rSan M1919A4 & 100 & 5  \\
-  &        & \rNi LWMMG & 100 & 5  \\
-  &        & \rShi PK & 100 & 10  \\
-  &        & \rShi PK & 100 & 10  \\
-  &        & \rSan Bren & 100 & 1  \\
-  &        & \rGo MG5 & 100 & 10  \\
-  &        & \rGo MG5 & 9x & 10  \\
-  & \ring  & \rGo MG5 & 100 & 10 \\
-  &        & \rGo Negev & 100 & 6  \\
-  & \ring  & \rGo PKP & 100 & 10 \\
+    &        & \rShi BAR & 100 & 6
+\\  &        & \rSan M2HB & 100 & 10
+\\  &        & \rSan M1919A4 & 100 & 5
+\\  &        & \rNi LWMMG & 100 & 5
+\\  &        & \rShi PK & 100 & 10
+\\  &        & \rShi PK & 100 & 10
+\\  &        & \rSan Bren & 100 & 1
+\\  &        & \rGo MG5 & 100 & 10
+\\  &        & \rGo MG5 & 9x & 10
+\\  & \ring  & \rGo MG5 & 100 & 10
+\\  &        & \rGo Negev & 100 & 6
+\\  & \ring  & \rGo PKP & 100 & 10
 \end{tabular}
 \quad
 \begin{tabular}[t]{>{\stepcounter{rownum6}\arabic{rownum6}} r | V | p{120pt}|l|l}
 \multicolumn{2}{c}{No.} & Name & Lv & SLv\\ \hline
-  & \ring  & \rGo M1887 & 100 & 6  \\
-  &        & \rShi M37 & 100 & 1  \\
-  &        & \rSan M500 & 100 & 1  \\
-  &        & \rShi M590 & 100 & 1  \\
-  &        & \rGo KSG & 100 & 8  \\
-  &        & \rShi Type 97S & 100 & 5  \\
-  &        & \rShi SPAS-12 & 100 & 1  \\
-  &        & \rShi M1014 & 100 & 3  \\
-  &        & \rIchi Elphelt & 100 & 8  \\
+    & \ring  & \rGo M1887 & 100 & 6
+\\  &        & \rShi M37 & 100 & 1
+\\  &        & \rSan M500 & 100 & 1
+\\  &        & \rShi M590 & 100 & 1
+\\  &        & \rGo KSG & 100 & 8
+\\  &        & \rShi Type 97S & 100 & 5
+\\  &        & \rShi SPAS-12 & 100 & 1
+\\  &        & \rShi M1014 & 100 & 3
+\\  &        & \rIchi Elphelt & 100 & 8
 \end{tabular}
 \pagebreak
 
