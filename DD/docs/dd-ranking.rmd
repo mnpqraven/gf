@@ -1,0 +1,41 @@
+---
+title: Muh gay DD teams
+author: Othi
+header-includes:
+    - \usepackage{xparse}
+    - \usepackage{xcolor,colortbl}
+    - \usepackage{listings}
+output: pdf_document
+---
+\definecolor{light-gray}{gray}{0.6}
+\definecolor{light-green}{RGB}{144,210,144}
+\definecolor{orange}{RGB}{255,153,51}
+\definecolor{light-red}{RGB}{255,51,51}
+\definecolor{lavender}{RGB}{153,153,255}
+\NewDocumentCommand{\codeword}{v}{\colorbox{light-gray}{\texttt{\textcolor{blue}{#1}}}}
+
+\newcommand{\inlinecode}{\texttt}
+
+Enemy settings: Boss, EVA 30
+
+DPS values are relative to each other, not to be interpreted directly in DD ranking map against mobs
+
+\hspace*{-1cm}\begin{tabular}{| c || c || c | c ||
+l | l | l | l | l ||
+r || l |}
+\hline
+\multicolumn{2}{|c||}{$\#$} &
+\multicolumn{2}{|c||}{DPS 8/20s} &            Pos.7  & Pos.4 & Pos.1 & Offtank  & Maintank & Fairy LV/SLV    & Comment      \\ \hline \hline
+1  & \cellcolor{light-green}AR & 51k & 133k & G36    & M4A1  & G11   & Skorpion & RO635    & Warrior 70/6    & general 1    \\ \hline
+2  & \cellcolor{light-red}AR   & 38k & 108k & G11    & K5    & RFB   & G36c     & UMP45    & Taunt 50/9      & 1st boss/Jup \\ \hline
+3  & \cellcolor{light-red}AR   & 50k & 121k & G11    & AR-15 & K2    & K5       & T79      & Taunt 50/9      & 2nd boss/Jup \\ \hline
+4  & \cellcolor{light-green}AR & 43k & 108k & T64    & Grizz & G11   & Vector   & UMP9     & Fury 50/3       & general 2    \\ \hline
+5  & \cellcolor{orange}RF      & 55k & 166k & WA2000 & 5-7   & SVD   & PPK      & Welrod   & Airstrike 30/8  & jäeger       \\ \hline
+6  & \cellcolor{orange}RF      & 56k & 175k & WA2000 & 5-7   & SVD   & Mk23     & Welrod   & Airstrike 70/7  & jäeger       \\ \hline
+7  & \cellcolor{lavender}MG    & 36k & 86k  & M2HB   & Colt  & PK    & Grizz    & Elphelt  & Para 30/10 DMG1 & TopLeft heli \\ \hline
+8  & \cellcolor{lavender}MG    & 35k & 72k  & MG5    & LWMMG & PK    & MP-446   & CptChina & Para 70/10 DMG2 & BotLeft heli \\ \hline
+9  & \cellcolor{lavender}MG    & 40k & 82k  & PKP    & M1919 & MG5   & Mk23     & M37      & Para 40/10 MG   & general 3    \\ \hline
+10 & \cellcolor{light-gray}MG  & 31k & 88k  & Negev  & BAR   & MG5   & Conten.  & KSG      & Armor 40/4      & Garm         \\ \hline
+\end{tabular}
+\hspace*{-1cm}
+

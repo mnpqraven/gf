@@ -1,12 +1,18 @@
 ---
 title: Othi's Doll Index
 author: Othi
-output: [html_document, pdf_document]
 header-includes:
     - \usepackage{multirow,array,colortbl,graphicx,cellspace,xcoffins,caption}
     - \usepackage[dvipsnames]{xcolor}
     - \usepackage{xparse}
+output:
+    pdf_document:
+        number_sections: true
 ---
+
+\newcommand{\lv}[2]{\item {#1} to Lv{#2}}
+\newcommand{\slv}[2]{\item {#1} to SL{#2}}
+\newcommand{\both}[3]{\item {#1} to Lv{#2} and SL{#3}}
 
 \newcommand{\rIchi}{\cellcolor{Periwinkle}}
 \newcommand{\rNi}{\cellcolor{White}}
@@ -14,32 +20,11 @@ header-includes:
 \newcommand{\rShi}{\cellcolor{LimeGreen}}
 \newcommand{\rGo}{\cellcolor{Dandelion}}
 
+\newcolumntype{V}{>{\centering\arraybackslash} m{.02\linewidth} }
+
 \newcommand{\ring}{\cellcolor{White}\raisebox{-.25\height}{\includegraphics[width=10pt]{img/ring.png}}}
 \tableofcontents
 \pagebreak
-
-# TO-DO
-\newcommand{\lv}[2]{\item {#1} to Lv{#2}}
-\newcommand{\slv}[2]{\item {#1} to SL{#2}}
-\newcommand{\both}[3]{\item {#1} to Lv{#2} and SL{#3}}
-\begin{itemize}
-\slv{warrior}{10}
-\slv{1st airstike}{10}
-\slv{2nd airstike}{10}
-\slv{1st taunt}{10}
-\slv{2nd taunt}{10}
-\slv{UMP45}{10}
-\slv{UMP9}{10}
-\slv{Z62}{10}
-\slv{NZ75}{10}
-\slv{CZ75}{10}
-\slv{last G11}{10}
-\slv{M16}{10}
-\slv{both 5-7}{10}
-\slv{2nd Grizzly}{10}
-\both{3rd Grizzly}{100}{10}
-\item 300k + tickets + qcs for IWS + AK12 + AN94
-\end{itemize}
 
 # Doll list
 
@@ -50,7 +35,7 @@ header-includes:
 ## AR & SMG
 \begin{tabular}[t]{>{\stepcounter{rownum1}\arabic{rownum1}} r | V | p{120pt}|l|l}
 \multicolumn{2}{c}{No.} & Name & Lv & SLv\\ \hline
-  & \ring  & \rShi M16A1 & 100 & 8 \\
+  &        & \rShi M16A1 & 100 & 8 \\
   & \ring  & \rShi M4A1 & 100 & 10  \\
   &        & \rShi M4 SOPMOD II & 100 & 10 \\
   & \ring  & \rShi ST-AR15 & 100 & 10 \\
@@ -187,3 +172,40 @@ header-includes:
   &        & \rIchi Elphelt & 100 & 8  \\
 \end{tabular}
 \pagebreak
+
+# TO-DO
+
+## DD
+- 4 groza drops
+- 1 m1887 drop
+- top 10% ranking
+
+## Leveling
+\begin{itemize}
+\slv{warrior}{10}
+\slv{1st airstike}{10}
+\slv{2nd airstike}{10}
+\slv{1st taunt}{10}
+\slv{2nd taunt}{10}
+\slv{UMP45}{10}
+\slv{UMP9}{10}
+\slv{Z62}{10}
+\slv{NZ75}{10}
+\slv{CZ75}{10}
+\slv{last G11}{10}
+\slv{M16}{10}
+\slv{both 5-7}{10}
+\slv{2nd Grizzly}{10}
+\both{3rd Grizzly}{100}{10}
+\slv{1st PPK}{10}
+\both{2nd PPK}{100}{10}
+\item 300k + tickets + qcs for IWS + purple cano in june
+\item 300k + tickets + qcs before xmas for AK12 + AN94
+\end{itemize}
+
+## Overall Progression
+- Keep the 3rd Airstrike
+- Keep the 3rd Taunt
+- Keep the 3rd WA2000
+- Keep the 2nd Lee
+- Keep all purple canos
