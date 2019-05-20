@@ -10,7 +10,7 @@
 ![](img/dd-team-list.png)
 
 ## Default Spawning
-![context](img/default-spawn.png)
+![context](img/default-spawn-bg.png)
 
 **Boss spawns:**
 - 5/10/20/35
