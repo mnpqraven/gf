@@ -3,6 +3,8 @@
 
 ### [General Guide on GFL Corner](https://www.gflcorner.com/dd/)
 
+### [Turn 15 weighted movement](https://docs.google.com/spreadsheets/d/1ea5dU46pK8yegZ5yqLl6vCcmxwivDpSb1gxBukBd700/edit#gid=0)
+
 ## Team List
 
 - For text format see this: [(pdf)](docs/dd-ranking.pdf),[(rmd)](docs/dd-ranking.rmd)

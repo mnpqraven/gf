@@ -28,9 +28,12 @@ output:
 
 # Doll list
 
-\newcounter{rownum1} \setcounter{rownum1}{0} \newcounter{rownum2} \setcounter{rownum2}{0}
-\newcounter{rownum3} \setcounter{rownum3}{0} \newcounter{rownum4} \setcounter{rownum4}{0}
-\newcounter{rownum5} \setcounter{rownum5}{0} \newcounter{rownum6} \setcounter{rownum6}{0}
+\newcounter{rownum1} \setcounter{rownum1}{0}
+\newcounter{rownum2} \setcounter{rownum2}{0}
+\newcounter{rownum3} \setcounter{rownum3}{0}
+\newcounter{rownum4} \setcounter{rownum4}{0}
+\newcounter{rownum5} \setcounter{rownum5}{0}
+\newcounter{rownum6} \setcounter{rownum6}{0}
 
 ## AR & SMG
 \begin{tabular}[t]{>{\stepcounter{rownum1}\arabic{rownum1}} r | V | p{120pt}|l|l}
@@ -89,7 +92,6 @@ output:
 \\  &        & \rGo PM-06 & 3x & 1
 \\  &        & \rGo Type 100 & 4x & 1
 \end{tabular}
-\pagebreak
 
 ## RF & HG
 \begin{tabular}[t]{>{\stepcounter{rownum3}\arabic{rownum3}} r | V | p{120pt}|l|l}
@@ -146,7 +148,6 @@ output:
 \\  &        & \rShi K5 & 100 & 10
 \\  &        & \rIchi Noel & 100 & 4
 \end{tabular}
-\pagebreak
 
 ## MG & SG
 \begin{tabular}[t]{>{\stepcounter{rownum5}\arabic{rownum5}} r | V | p{120pt}|l|l}
@@ -177,16 +178,21 @@ output:
 \\  &        & \rShi M1014 & 100 & 3
 \\  &        & \rIchi Elphelt & 100 & 8
 \end{tabular}
-\pagebreak
 
 # TO-DO
 
 ## DD
 - 4 groza drops
-- 1 m1887 drop
 - top 10% ranking
 
 ## Leveling
+\begin{itemize}
+\both{3rd Grizzly}{100}{10}
+\both{2nd PPK}{100}{10}
+\both{9 Grozas}{100}{10}
+\end{itemize}
+
+## Skill Leveling
 \begin{itemize}
 \slv{warrior}{10}
 \slv{1st airstike}{10}
@@ -202,11 +208,7 @@ output:
 \slv{M16}{10}
 \slv{both 5-7}{10}
 \slv{2nd Grizzly}{10}
-\both{3rd Grizzly}{100}{10}
 \slv{1st PPK}{10}
-\both{2nd PPK}{100}{10}
-\item 300k + tickets + qcs for IWS + purple cano in june
-\item 300k + tickets + qcs before xmas for AK12 + AN94
 \end{itemize}
 
 ## Overall Progression
@@ -215,3 +217,5 @@ output:
 - Keep the 3rd WA2000
 - Keep the 2nd Lee
 - Keep all purple canos
+- 300k + tickets + qcs for IWS + purple cano in june
+- 300k + tickets + qcs before xmas for AK12 + AN94
