@@ -16,7 +16,7 @@ fairyBattl 5 "2nd airstike" 8 10 NA NA
 fairyBattl 5 "1st taunt" 9 10 NA NA
 fairyBattl 5 "2nd taunt" 9 10 NA NA
 fairyBattl 5 "angery fairy" 4 10 NA NA
-doll 5 UMP45 1 10 0 3
+doll 4 UMP45 1 10 0 3
 doll 5 UMP9 1 10 NA NA
 doll 5 Z62 1 10 NA NA
 doll 5 "last G11" 1 10 NA NA

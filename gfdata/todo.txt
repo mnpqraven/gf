@@ -1,1 +1,1 @@
-/home/othi/Documents/stuff/gf/todo.txt
+../todo.txt
