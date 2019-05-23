@@ -2,7 +2,7 @@
 title: Othi's Doll Index
 author: Othi
 header-includes:
-    - \usepackage{multirow,array,colortbl,graphicx,cellspace,xcoffins,caption}
+    - \usepackage{multirow,array,colortbl,graphicx,cellspace,xcoffins,caption,datetime}
     - \usepackage[dvipsnames]{xcolor}
     - \usepackage{xparse}
 output:
@@ -23,6 +23,8 @@ output:
 \newcolumntype{V}{>{\centering\arraybackslash} m{.02\linewidth} }
 
 \newcommand{\ring}{\cellcolor{White}\raisebox{-.25\height}{\includegraphics[width=10pt]{img/ring.png}}}
+Last Updated: \today
+
 \tableofcontents
 \pagebreak
 
@@ -182,8 +184,7 @@ output:
 # TO-DO
 
 ## DD
-- 4 groza drops
-- top 10% ranking
+- 2 groza drops
 
 ## Leveling
 \begin{itemize}
@@ -199,13 +200,14 @@ output:
 \slv{2nd airstike}{10}
 \slv{1st taunt}{10}
 \slv{2nd taunt}{10}
+\slv{angery fairy}{10}
 \slv{UMP45}{10}
 \slv{UMP9}{10}
 \slv{Z62}{10}
-\slv{NZ75}{10}
-\slv{CZ75}{10}
 \slv{last G11}{10}
 \slv{M16}{10}
+\slv{NZ75}{10}
+\slv{CZ75}{10}
 \slv{both 5-7}{10}
 \slv{2nd Grizzly}{10}
 \slv{1st PPK}{10}

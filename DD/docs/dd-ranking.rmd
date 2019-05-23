@@ -35,7 +35,7 @@ r || l |}
 7  & \cellcolor{lavender}MG    & 36k & 86k  & M2HB   & Colt  & PK    & Grizz    & Elphelt  & Para 30/10 DMG1 & TopLeft heli \\ \hline
 8  & \cellcolor{lavender}MG    & 35k & 72k  & MG5    & LWMMG & PK    & MP-446   & CptChina & Para 70/10 DMG2 & BotLeft heli \\ \hline
 9  & \cellcolor{lavender}MG    & 40k & 82k  & PKP    & M1919 & MG5   & Mk23     & M37      & Para 40/10 MG   & general 3    \\ \hline
-10 & \cellcolor{light-gray}MG  & 31k & 88k  & Negev  & BAR   & MG5   & Conten.  & KSG      & Armor 40/4      & Garm         \\ \hline
+10 & \cellcolor{light-gray}MG  & 31k & 88k  & Negev  & Nagant& MG5   & Conten.  & KSG      & Armor 40/4      & Garm         \\ \hline
 \end{tabular}
 \hspace*{-1cm}
 

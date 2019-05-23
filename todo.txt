@@ -1,0 +1,29 @@
+type rarity name slvfrom slvto modfrom modto
+doll 5 "3rd Grizzly" 1 10 NA NA
+doll 2 "2nd PPK" 1 10 NA NA
+doll 3 Groza 1 10 NA NA
+doll 3 Groza 1 10 NA NA
+doll 5 Groza 1 10 NA NA
+doll 5 Groza 1 10 NA NA
+doll 5 Groza 1 10 NA NA
+doll 5 Groza 1 10 NA NA
+doll 5 Groza 1 10 NA NA
+doll 5 Groza 1 10 NA NA
+doll 5 Groza 1 10 NA NA
+fairyBattl 5 warrior 7 10 NA NA
+fairyBattl 5 "1st airstike" 7 10 NA NA
+fairyBattl 5 "2nd airstike" 8 10 NA NA
+fairyBattl 5 "1st taunt" 9 10 NA NA
+fairyBattl 5 "2nd taunt" 9 10 NA NA
+fairyBattl 5 "angery fairy" 4 10 NA NA
+doll 5 UMP45 1 10 0 3
+doll 5 UMP9 1 10 NA NA
+doll 5 Z62 1 10 NA NA
+doll 5 "last G11" 1 10 NA NA
+doll 5 M16 1 10 NA NA
+doll 5 NZ75 1 10 NA NA
+doll 5 CZ75 1 10 NA NA
+doll 5 5-7 1 10 NA NA
+doll 5 5-7 1 10 NA NA
+doll 5 "2nd Grizzly" 1 10 NA NA
+doll 5 "1st PPK" 1 10 NA NA
