@@ -12,6 +12,13 @@ todo.datasim <- todo
 ## DATA MANIPULATION
 # ring
 dolldf$Ringed <- ifelse(is.na(dolldf$ring), "No", "Yes")
+# core table
+core.link <- c(1,2,3,4,5)
+core.link.2star <- c(0,1,1,2,3)
+core.link.3star <- c(0,3,3,6,9)
+core.link.4star <- c(0,9,9,18,27)
+core.link.5star <- c(0,15,15,30,45)
+df.core.doll <- as.data.frame(cbind(core.link, core.link.2star, core.link.3star, core.link.4star, core.link.5star))
 # datasim
 datasim.slv <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
@@ -81,6 +88,13 @@ todo.datasim$digimind.total.core <- sapply(seq_len(nrow(todo)), function(i) with
                                                 sum(df.digimind.4star$digimind.4star.core[todo$rarity[i] == 4 & df.digimind.4star$digimind.mod > todo$modfrom[i] & df.digimind.4star$digimind.mod <= todo$modto[i]])
                                                 )
                      )
+todo.datasim$link.total.core <- sapply(seq_len(nrow(todo)), function(i) with(todo,
+                                                                        sum(df.core.doll$core.link.2star[todo$rarity[i] == 2 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+                                                                        sum(df.core.doll$core.link.3star[todo$rarity[i] == 3 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+                                                                        sum(df.core.doll$core.link.4star[todo$rarity[i] == 4 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+                                                                        sum(df.core.doll$core.link.5star[todo$rarity[i] == 5 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]])
+)
+)
 #todo.datasim <- add_row(todo.datasim,
 #                        name = "Total", datasim.total.tier1 = sum(todo.datasim$datasim.total.tier1),
 #                        datasim.total.tier2 = sum(todo.datasim$datasim.total.tier2, na.rm = T),
@@ -90,7 +104,7 @@ todo.datasim$digimind.total.core <- sapply(seq_len(nrow(todo)), function(i) with
 
 #datasimTotal <- todo.datasim[(nrow(todo.datasim) + 1), -(1:7)]
 #datasimTotal <- colSums(todo.datasim[, -(1:7)], na.rm = T)
-todo.datasim[(nrow(todo.datasim) + 1), -(1:7)] <- colSums(todo.datasim[, -(1:7)], na.rm = T)
+todo.datasim[(nrow(todo.datasim) + 1), -(1:9)] <- colSums(todo.datasim[, -(1:9)], na.rm = T)
 levels(todo.datasim$type)[nrow(todo.datasim) + 1] <- "Total"
 todo.datasim$type[nrow(todo.datasim)] <- "Total"
 
@@ -108,6 +122,7 @@ ar  <- dolldf$type == "AR"
 
 ## DISPLAYING
 testfilter <- dolldf[ar,c("type","name","lv","slv")]
+total.core <- todo.datasim$link.total.core[nrow(todo.datasim)] + todo.datasim$digimind.total.core[nrow(todo.datasim)]
 #str(dolldf)
 # formatted doll df
 dolldf.pretty <- dolldf[,c("type","Ringed", "name", "lv", "slv")]
@@ -117,13 +132,16 @@ colnames(todo.pretty) <- c("Type",
                            "Name",
                            "SLv",
                            "Goal SLv",
+                           "Link",
+                           "Goal Link",
                            "MOD",
                            "Goal MOD",
                            "Basic",
                            "Intermediate",
                            "Advanced",
                            "Memory Frags",
-                           "MOD Cores")
+                           "MOD Cores",
+                           "Total Link")
 ## EXPORTING
 # export to csv
 # write.csv(dolldf,file='dolltable.csv', row.names = F)

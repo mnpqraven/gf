@@ -20,6 +20,7 @@ header-includes:
 source('gfdata/R/main.R')
 library(knitr)
 ```
+
 ## doll list highly experimental
 ```{r message=FALSE, echo=F}
 kable(dolldf.pretty, caption="Doll List caption")
@@ -29,3 +30,5 @@ kable(dolldf.pretty, caption="Doll List caption")
 ```{r message=FALSE, echo=F}
 kable(todo.pretty, caption="todo")
 ```
+
+- what about CSV ?
