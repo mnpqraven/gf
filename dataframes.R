@@ -152,11 +152,6 @@ todo.pretty[todo.pretty == 0] <- NA
 
 ## EXPORTING
 # export to csv
-write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = ",", quote = F)
-write.table(todo.datasim, file = "dbs/todolist_output.csv", sep = ",", quote = F)
+write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = ",", quote = F, row.names=F)
+write.table(todo.datasim, file = "dbs/todolist_output.csv", sep = ",", quote = F, row.names=F)
 
-#useless
-fn <- function(x) {
-  x + 1 # A comment, kept as part of the source
-}
-getSrcDirectory(fn)
