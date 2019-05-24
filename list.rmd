@@ -221,3 +221,9 @@ Last Updated: \today
 - Keep all purple canos
 - 300k + tickets + qcs for IWS + purple cano in june
 - 300k + tickets + qcs before xmas for AK12 + AN94
+
+## highly experimental
+```{r message=FALSE}
+source('gfdata/R/main.R')
+dolldf
+```

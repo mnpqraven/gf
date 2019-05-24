@@ -1,5 +1,8 @@
 library(dplyr)
 
+## TODO: Integrate with rmd
+## https://stackoverflow.com/questions/10966109/how-to-source-r-markdown-file-like-sourcemyfile-r
+
 ## DOLL TABLE
 # read the doll list table
 dolldf = read.table(file="list.txt", header = T, sep = " ")
@@ -67,25 +70,34 @@ todo.datasim$datasim.total.tier3 <- sapply(seq_len(nrow(todo)), function(i) with
                                                 )
                      )
 todo.datasim$digimind.total.frag <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(mat.digimind$digimind.frag[todo$rarity[i] == 2 & mat.digimind$digimind.mod > todo$modfrom[i] & mat.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(mat.digimind$digimind.frag[todo$rarity[i] == 3 & mat.digimind$digimind.mod > todo$modfrom[i] & mat.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(mat.digimind$digimind.frag[todo$rarity[i] == 4 & mat.digimind$digimind.mod > todo$modfrom[i] & mat.digimind$digimind.mod <= todo$modto[i]])
+                                                sum(df.digimind.2star$digimind.2star.frag[todo$rarity[i] == 2 & df.digimind.2star$digimind.mod > todo$modfrom[i] & df.digimind.2star$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind.3star$digimind.3star.frag[todo$rarity[i] == 3 & df.digimind.3star$digimind.mod > todo$modfrom[i] & df.digimind.3star$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind.4star$digimind.4star.frag[todo$rarity[i] == 4 & df.digimind.4star$digimind.mod > todo$modfrom[i] & df.digimind.4star$digimind.mod <= todo$modto[i]])
                                                 )
                      )
 todo.datasim$digimind.total.core <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(mat.digimind$digimind.core[todo$rarity[i] == 2 & mat.digimind$digimind.mod > todo$modfrom[i] & mat.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(mat.digimind$digimind.core[todo$rarity[i] == 3 & mat.digimind$digimind.mod > todo$modfrom[i] & mat.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(mat.digimind$digimind.core[todo$rarity[i] == 4 & mat.digimind$digimind.mod > todo$modfrom[i] & mat.digimind$digimind.mod <= todo$modto[i]])
+                                                sum(df.digimind.2star$digimind.2star.core[todo$rarity[i] == 2 & df.digimind.2star$digimind.mod > todo$modfrom[i] & df.digimind.2star$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind.3star$digimind.3star.core[todo$rarity[i] == 3 & df.digimind.3star$digimind.mod > todo$modfrom[i] & df.digimind.3star$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind.4star$digimind.4star.core[todo$rarity[i] == 4 & df.digimind.4star$digimind.mod > todo$modfrom[i] & df.digimind.4star$digimind.mod <= todo$modto[i]])
                                                 )
                      )
-todo.datasim <- add_row(todo.datasim, name = "Total", datasim.total.tier1 = sum(todo.datasim$datasim.total.tier1), datasim.total.tier2 = sum(todo.datasim$datasim.total.tier2), datasim.total.tier3 = sum(todo.datasim$datasim.total.tier3))
+#todo.datasim <- add_row(todo.datasim,
+#                        name = "Total", datasim.total.tier1 = sum(todo.datasim$datasim.total.tier1),
+#                        datasim.total.tier2 = sum(todo.datasim$datasim.total.tier2, na.rm = T),
+#                        datasim.total.tier3 = sum(todo.datasim$datasim.total.tier3, na.rm = T),
+#                        digimind.total.frag = sum(todo.datasim$digimind.total.frag, na.rm = T),
+#                        digimind.total.core = sum(todo.datasim$digimind.total.core, na.rm = T))
+
+#datasimTotal <- todo.datasim[(nrow(todo.datasim) + 1), -(1:7)]
+#datasimTotal <- colSums(todo.datasim[, -(1:7)], na.rm = T)
+todo.datasim[(nrow(todo.datasim) + 1), -(1:7)] <- colSums(todo.datasim[, -(1:7)], na.rm = T)
+levels(todo.datasim$type)[nrow(todo.datasim) + 1] <- "Total"
+todo.datasim$type[nrow(todo.datasim)] <- "Total"
 
 ## FILTERING
 # use square brackets [] adding a , means no row filtering
 # FACTORING, can be loosely interpretiert as categorizing
 # type <- as.factor(dolldf$type)
-# level display
-levels(dolldf$type)
 
 ar  <- dolldf$type == "AR"
 # smg <- dolldf[dolldf$type == "SMG",]
@@ -99,7 +111,19 @@ testfilter <- dolldf[ar,c("type","name","lv","slv")]
 #str(dolldf)
 # formatted doll df
 dolldf.pretty <- dolldf[,c("type","Ringed", "name", "lv", "slv")]
-
+todo.pretty <- todo.datasim
+colnames(todo.pretty) <- c("Type",
+                           "Rarity",
+                           "Name",
+                           "SLv",
+                           "Goal SLv",
+                           "MOD",
+                           "Goal MOD",
+                           "Basic",
+                           "Intermediate",
+                           "Advanced",
+                           "Memory Frags",
+                           "MOD Cores")
 ## EXPORTING
 # export to csv
 # write.csv(dolldf,file='dolltable.csv', row.names = F)

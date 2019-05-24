@@ -1,0 +1,31 @@
+---
+title:
+author:
+output:
+    pdf_document:
+        number_sections: false
+geometry: "left=1cm,right=1cm,top=2cm,bottom=2cm"
+classoption: landscape
+---
+
+backup packages:
+\begin{verbatim}
+header-includes:
+    - \usepackage{multirow,array,colortbl,graphicx,cellspace,xcoffins,caption,datetime}
+    - \usepackage[dvipsnames]{xcolor}
+    - \usepackage{xparse}
+\end{verbatim}
+
+```{r message=FALSE, echo=F}
+source('gfdata/R/main.R')
+library(knitr)
+```
+## doll list highly experimental
+```{r message=FALSE, echo=F}
+kable(dolldf.pretty, caption="Doll List caption")
+```
+
+## todo list highly experimental
+```{r message=FALSE, echo=F}
+kable(todo.pretty, caption="todo")
+```
