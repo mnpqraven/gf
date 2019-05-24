@@ -1,6 +1,6 @@
 ---
-title:
-author:
+title: Othi's Doll Index rev.2
+author: Othi
 output:
     pdf_document:
         number_sections: false
@@ -8,6 +8,7 @@ geometry: "left=1cm,right=1cm,top=2cm,bottom=2cm"
 classoption: landscape
 ---
 
+```{r message=F, eval=F, echo=F}
 backup packages:
 \begin{verbatim}
 header-includes:
@@ -15,20 +16,20 @@ header-includes:
     - \usepackage[dvipsnames]{xcolor}
     - \usepackage{xparse}
 \end{verbatim}
+```
 
 ```{r message=FALSE, echo=F}
-source('gfdata/R/main.R')
-library(knitr)
+source('dataframes.R', chdir = T)
 ```
 
 ## doll list highly experimental
-```{r message=FALSE, echo=F}
-kable(dolldf.pretty, caption="Doll List caption")
+```{r message=F, echo=F}
+kable(df.dolllist.pretty, caption = "Doll List", format="markdown")
 ```
 
 ## todo list highly experimental
-```{r message=FALSE, echo=F}
-kable(todo.pretty, caption="todo")
+```{r message=F, echo=F}
+kable(todo.pretty, caption="todo", format="markdown")
 ```
 
 - what about CSV ?

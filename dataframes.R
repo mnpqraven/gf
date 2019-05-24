@@ -1,17 +1,18 @@
+# IF YOU CHANGED THE FILENAME, YOU NEED TO ALSO CHANGE THE FILENAME HERE
+pathwd<-sub("/dataframes.R","",system("find . -type f -name dataframes.R",intern=T)[1])
+setwd(pathwd)
 library(dplyr)
-
+library(knitr)
 ## TODO: Integrate with rmd
 ## https://stackoverflow.com/questions/10966109/how-to-source-r-markdown-file-like-sourcemyfile-r
 
 ## DOLL TABLE
 # read the doll list table
-dolldf = read.table(file="list.txt", header = T, sep = " ")
-todo = read.table(file="todo.txt", header = T, sep = " ")
+df.dolllist = read.table(file="dbs/list.csv", header = T, sep = " ")
+todo = read.table(file="dbs/todo.csv", header = T, sep = " ")
 todo.datasim <- todo
 
 ## DATA MANIPULATION
-# ring
-dolldf$Ringed <- ifelse(is.na(dolldf$ring), "No", "Yes")
 # core table
 core.link <- c(1,2,3,4,5)
 core.link.2star <- c(0,1,1,2,3)
@@ -19,7 +20,8 @@ core.link.3star <- c(0,3,3,6,9)
 core.link.4star <- c(0,9,9,18,27)
 core.link.5star <- c(0,15,15,30,45)
 df.core.doll <- as.data.frame(cbind(core.link, core.link.2star, core.link.3star, core.link.4star, core.link.5star))
-# datasim
+
+# datasim dataframes
 datasim.slv <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
 
 datasim.doll.tier1 <- c(100, 200, 300, 0, 0, 0, 0, 0, 0)
@@ -53,9 +55,7 @@ digimind.3star.frag <- c(200, 800, 1600)
 digimind.3star.core <- c(15, 30, 45)
 digimind.4star.frag <- c(200, 1000, 2000)
 digimind.4star.core <- c(20, 40, 60)
-df.digimind.2star <- as.data.frame(cbind(digimind.mod, digimind.2star.frag, digimind.2star.core))
-df.digimind.3star <- as.data.frame(cbind(digimind.mod, digimind.3star.frag, digimind.3star.core))
-df.digimind.4star <- as.data.frame(cbind(digimind.mod, digimind.4star.frag, digimind.4star.core))
+df.digimind <- as.data.frame(cbind(digimind.mod, digimind.2star.frag, digimind.2star.frag, digimind.3star.frag, digimind.3star.core, digimind.4star.frag, digimind.4star.core))
 # datasim calculation
 # TODO HOC
 todo.datasim$datasim.total.tier1 <- sapply(seq_len(nrow(todo)), function(i) with(todo,
@@ -76,23 +76,25 @@ todo.datasim$datasim.total.tier3 <- sapply(seq_len(nrow(todo)), function(i) with
                                                 sum(df.datasim.doll$datasim.doll.tier3[todo$type[i] == "doll" & df.datasim.doll$datasim.slv >= todo$slvfrom[i] & df.datasim.doll$datasim.slv < todo$slvto[i]])
                                                 )
                      )
+
 todo.datasim$digimind.total.frag <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(df.digimind.2star$digimind.2star.frag[todo$rarity[i] == 2 & df.digimind.2star$digimind.mod > todo$modfrom[i] & df.digimind.2star$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind.3star$digimind.3star.frag[todo$rarity[i] == 3 & df.digimind.3star$digimind.mod > todo$modfrom[i] & df.digimind.3star$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind.4star$digimind.4star.frag[todo$rarity[i] == 4 & df.digimind.4star$digimind.mod > todo$modfrom[i] & df.digimind.4star$digimind.mod <= todo$modto[i]])
+                                                sum(df.digimind$digimind.2star.frag[todo$rarity[i] == 2 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind$digimind.3star.frag[todo$rarity[i] == 3 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind$digimind.4star.frag[todo$rarity[i] == 4 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]])
                                                 )
                      )
 todo.datasim$digimind.total.core <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(df.digimind.2star$digimind.2star.core[todo$rarity[i] == 2 & df.digimind.2star$digimind.mod > todo$modfrom[i] & df.digimind.2star$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind.3star$digimind.3star.core[todo$rarity[i] == 3 & df.digimind.3star$digimind.mod > todo$modfrom[i] & df.digimind.3star$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind.4star$digimind.4star.core[todo$rarity[i] == 4 & df.digimind.4star$digimind.mod > todo$modfrom[i] & df.digimind.4star$digimind.mod <= todo$modto[i]])
+                                                sum(df.digimind$digimind.2star.core[todo$rarity[i] == 2 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind$digimind.3star.core[todo$rarity[i] == 3 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+                                                sum(df.digimind$digimind.4star.core[todo$rarity[i] == 4 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]])
                                                 )
                      )
+
 todo.datasim$link.total.core <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                                        sum(df.core.doll$core.link.2star[todo$rarity[i] == 2 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
-                                                                        sum(df.core.doll$core.link.3star[todo$rarity[i] == 3 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
-                                                                        sum(df.core.doll$core.link.4star[todo$rarity[i] == 4 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
-                                                                        sum(df.core.doll$core.link.5star[todo$rarity[i] == 5 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]])
+                                                                             sum(df.core.doll$core.link.2star[todo$rarity[i] == 2 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+                                                                             sum(df.core.doll$core.link.3star[todo$rarity[i] == 3 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+                                                                             sum(df.core.doll$core.link.4star[todo$rarity[i] == 4 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+                                                                             sum(df.core.doll$core.link.5star[todo$rarity[i] == 5 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]])
 )
 )
 #todo.datasim <- add_row(todo.datasim,
@@ -102,47 +104,59 @@ todo.datasim$link.total.core <- sapply(seq_len(nrow(todo)), function(i) with(tod
 #                        digimind.total.frag = sum(todo.datasim$digimind.total.frag, na.rm = T),
 #                        digimind.total.core = sum(todo.datasim$digimind.total.core, na.rm = T))
 
-#datasimTotal <- todo.datasim[(nrow(todo.datasim) + 1), -(1:7)]
-#datasimTotal <- colSums(todo.datasim[, -(1:7)], na.rm = T)
-todo.datasim[(nrow(todo.datasim) + 1), -(1:9)] <- colSums(todo.datasim[, -(1:9)], na.rm = T)
-levels(todo.datasim$type)[nrow(todo.datasim) + 1] <- "Total"
-todo.datasim$type[nrow(todo.datasim)] <- "Total"
+
 
 ## FILTERING
 # use square brackets [] adding a , means no row filtering
 # FACTORING, can be loosely interpretiert as categorizing
-# type <- as.factor(dolldf$type)
+# type <- as.factor(df.dolllist$type)
 
-ar  <- dolldf$type == "AR"
-# smg <- dolldf[dolldf$type == "SMG",]
-# rf  <- dolldf[dolldf$type == "RF",]
-# hg  <- dolldf[dolldf$type == "HG",]
-# mg  <- dolldf[dolldf$type == "MG",]
-# sg  <- dolldf[dolldf$type == "SG",]
+ar  <- df.dolllist$type == "AR"
+# smg <- df.dolllist[df.dolllist$type == "SMG",]
+# rf  <- df.dolllist[df.dolllist$type == "RF",]
+# hg  <- df.dolllist[df.dolllist$type == "HG",]
+# mg  <- df.dolllist[df.dolllist$type == "MG",]
+# sg  <- df.dolllist[df.dolllist$type == "SG",]
 
 ## DISPLAYING
-testfilter <- dolldf[ar,c("type","name","lv","slv")]
+testfilter <- df.dolllist[ar,c("type","name","lv","slv")]
 total.core <- todo.datasim$link.total.core[nrow(todo.datasim)] + todo.datasim$digimind.total.core[nrow(todo.datasim)]
-#str(dolldf)
+
 # formatted doll df
-dolldf.pretty <- dolldf[,c("type","Ringed", "name", "lv", "slv")]
+df.dolllist.pretty <- df.dolllist[,c("type", "name", "link", "lv", "slv")]
+df.dolllist.pretty$Ringed <- ifelse(is.na(df.dolllist$ring), "No", "Yes")
+df.dolllist.pretty <- df.dolllist.pretty[,c("type", "Ringed" ,"name", "lv", "link", "slv")]
+
+# formatted todo df
 todo.pretty <- todo.datasim
+todo.pretty[(nrow(todo.datasim) + 1), -(1:9)] <- colSums(todo.pretty[, -(1:9)], na.rm = T)
+levels(todo.pretty$type)[nrow(todo.pretty) + 1] <- "Total"
+todo.pretty$type[nrow(todo.pretty)] <- "Total"
+
 colnames(todo.pretty) <- c("Type",
                            "Rarity",
                            "Name",
                            "SLv",
                            "Goal SLv",
-                           "Link",
-                           "Goal Link",
                            "MOD",
-                           "Goal MOD",
+                           "To MOD",
+                           "Link",
+                           "To Link",
                            "Basic",
                            "Intermediate",
                            "Advanced",
                            "Memory Frags",
                            "MOD Cores",
                            "Total Link")
+todo.pretty[todo.pretty == 0] <- NA
+
 ## EXPORTING
 # export to csv
-# write.csv(dolldf,file='dolltable.csv', row.names = F)
+write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = " ", quote = F)
+write.table(todo.datasim, file = "dbs/todolist_output.csv", sep = " ", quote = F)
 
+#useless
+fn <- function(x) {
+  x + 1 # A comment, kept as part of the source
+}
+getSrcDirectory(fn)

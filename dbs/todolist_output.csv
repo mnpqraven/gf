@@ -1,0 +1,38 @@
+type rarity name slvfrom slvto modfrom modto linkfrom linkto datasim.total.tier1 datasim.total.tier2 datasim.total.tier3 digimind.total.frag digimind.total.core link.total.core
+1 fairyBattl 5 warrior 7 10 NA NA NA NA 0 0 1200 0 0 NA
+2 fairyBattl 3 angery fairy 4 10 NA NA NA NA 0 1200 1200 NA NA NA
+3 fairyBattl 5 rescue 8 10 NA NA NA NA 0 0 1000 0 0 NA
+4 fairyBattl 5 1st airstike 8 10 NA NA NA NA 0 0 1000 0 0 NA
+5 fairyBattl 5 2nd airstike 8 10 NA NA NA NA 0 0 1000 0 0 NA
+6 fairyBattl 5 1st taunt 9 10 NA NA NA NA 0 0 600 0 0 NA
+7 fairyBattl 5 2nd taunt 9 10 NA NA NA NA 0 0 600 0 0 NA
+8 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+9 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+10 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+11 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+12 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+13 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+14 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+15 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+16 doll 5 Groza 1 10 NA NA 1 5 600 1020 500 0 0 105
+17 doll 4 UMP45 NA NA 0 3 NA NA NA NA NA 3200 120 NA
+18 doll 4 UMP9 9 10 NA NA NA NA 0 0 300 NA NA NA
+19 doll 3 Z62 9 10 NA NA NA NA 0 0 300 NA NA NA
+20 doll 5 last G11 6 10 NA NA NA NA 0 700 500 0 0 NA
+21 doll 4 M16 8 10 NA NA NA NA 0 0 500 NA NA NA
+22 doll 5 NZ75 8 10 NA NA NA NA 0 0 500 0 0 NA
+23 doll 5 CZ75 6 10 NA NA NA NA 0 700 500 0 0 NA
+24 doll 5 5-7 8 10 NA NA NA NA 0 0 500 0 0 NA
+25 doll 5 5-7 7 10 NA NA NA NA 0 400 500 0 0 NA
+26 doll 5 2nd Grizzly 1 10 NA NA NA NA 600 1020 500 0 0 NA
+27 doll 2 1st PPK 8 10 NA NA NA NA 0 0 500 NA 0 NA
+28 doll 5 calico 8 10 NA NA NA NA 0 0 500 0 0 NA
+29 doll 4 solt 6 10 NA NA NA NA 0 700 500 NA NA NA
+30 doll 4 2nd colt 6 10 NA NA NA NA 0 700 500 NA NA NA
+31 doll 2 nagant 6 10 NA NA NA NA 0 700 500 NA 0 NA
+32 doll 5 DSR-50 1 10 NA NA NA NA 600 1020 500 0 0 NA
+33 doll 4 KLIN 1 10 NA NA NA NA 600 1020 500 NA NA NA
+34 doll 4 M4A1 NA NA 0 3 NA NA NA NA NA 3200 120 NA
+35 doll 4 AR-15 NA NA 0 3 NA NA NA NA NA 3200 120 NA
+36 fairyStrat 1 2nd Illu 1 10 NA NA NA NA 1200 2040 1000 0 0 0
+37 doll 2 2nd PPK 1 10 NA NA NA NA 600 1020 500 NA 0 NA
