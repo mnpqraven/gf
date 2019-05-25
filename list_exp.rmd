@@ -1,11 +1,16 @@
 ---
-title: Othi's Doll Index rev.2
-author: Othi
+title: |
+  | Othi's Doll Index
+author: |
+  | Othi
+  | Last Updated: \today
 output:
     pdf_document:
         number_sections: false
 geometry: "left=1cm,right=1cm,top=2cm,bottom=2cm"
 classoption: landscape
+header-includes:
+    - \usepackage{datetime}
 ---
 
 ```{r message=F, eval=F, echo=F}
@@ -27,9 +32,20 @@ source('dataframes.R', chdir = T)
 kable(df.dolllist.pretty, caption = "Doll List", format="markdown")
 ```
 
-## todo list highly experimental
+## SLv roadmad
 ```{r message=F, echo=F}
-kable(todo.pretty, caption="todo", format="markdown")
+kable(filter.todo.slv, caption="todo", format="markdown")
 ```
 
-- what about CSV ?
+## Link core roadmad
+```{r message=F, echo=F}
+kable(filter.todo.core, caption="todo", format="markdown")
+```
+
+## MOD roadmad
+```{r message=F, echo=F}
+kable(filter.todo.MOD, caption="todo", format="markdown")
+```
+
+# other notes and todo
+- conditional formatting, cell color

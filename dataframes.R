@@ -59,51 +59,44 @@ df.digimind <- as.data.frame(cbind(digimind.mod, digimind.2star.frag, digimind.2
 # datasim calculation
 # TODO HOC
 todo.datasim$datasim.total.tier1 <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(df.datasim.fairyStrat$datasim.fairyStrat.tier1[todo$type[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyStrat$datasim.slv < todo$slvto[i]]) +
-                                                sum(df.datasim.fairyBattl$datasim.fairyBattl.tier1[todo$type[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyBattl$datasim.slv < todo$slvto[i]]) +
-                                                sum(df.datasim.doll$datasim.doll.tier1[todo$type[i] == "doll" & df.datasim.doll$datasim.slv >= todo$slvfrom[i] & df.datasim.doll$datasim.slv < todo$slvto[i]])
-                                                )
-                     )
+    sum(df.datasim.fairyStrat$datasim.fairyStrat.tier1[todo$type[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyStrat$datasim.slv < todo$slvto[i]]) +
+    sum(df.datasim.fairyBattl$datasim.fairyBattl.tier1[todo$type[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyBattl$datasim.slv < todo$slvto[i]]) +
+    sum(df.datasim.doll$datasim.doll.tier1[todo$type[i] == "doll" & df.datasim.doll$datasim.slv >= todo$slvfrom[i] & df.datasim.doll$datasim.slv < todo$slvto[i]])
+)
+)
 todo.datasim$datasim.total.tier2 <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(df.datasim.fairyStrat$datasim.fairyStrat.tier2[todo$type[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyStrat$datasim.slv < todo$slvto[i]]) +
-                                                sum(df.datasim.fairyBattl$datasim.fairyBattl.tier2[todo$type[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyBattl$datasim.slv < todo$slvto[i]]) +
-                                                sum(df.datasim.doll$datasim.doll.tier2[todo$type[i] == "doll" & df.datasim.doll$datasim.slv >= todo$slvfrom[i] & df.datasim.doll$datasim.slv < todo$slvto[i]])
-                                                )
-                     )
+    sum(df.datasim.fairyStrat$datasim.fairyStrat.tier2[todo$type[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyStrat$datasim.slv < todo$slvto[i]]) +
+    sum(df.datasim.fairyBattl$datasim.fairyBattl.tier2[todo$type[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyBattl$datasim.slv < todo$slvto[i]]) +
+    sum(df.datasim.doll$datasim.doll.tier2[todo$type[i] == "doll" & df.datasim.doll$datasim.slv >= todo$slvfrom[i] & df.datasim.doll$datasim.slv < todo$slvto[i]])
+)
+)
 todo.datasim$datasim.total.tier3 <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(df.datasim.fairyStrat$datasim.fairyStrat.tier3[todo$type[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyStrat$datasim.slv < todo$slvto[i]]) +
-                                                sum(df.datasim.fairyBattl$datasim.fairyBattl.tier3[todo$type[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyBattl$datasim.slv < todo$slvto[i]]) +
-                                                sum(df.datasim.doll$datasim.doll.tier3[todo$type[i] == "doll" & df.datasim.doll$datasim.slv >= todo$slvfrom[i] & df.datasim.doll$datasim.slv < todo$slvto[i]])
-                                                )
-                     )
+    sum(df.datasim.fairyStrat$datasim.fairyStrat.tier3[todo$type[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyStrat$datasim.slv < todo$slvto[i]]) +
+    sum(df.datasim.fairyBattl$datasim.fairyBattl.tier3[todo$type[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= todo$slvfrom[i] & df.datasim.fairyBattl$datasim.slv < todo$slvto[i]]) +
+    sum(df.datasim.doll$datasim.doll.tier3[todo$type[i] == "doll" & df.datasim.doll$datasim.slv >= todo$slvfrom[i] & df.datasim.doll$datasim.slv < todo$slvto[i]])
+)
+)
 
 todo.datasim$digimind.total.frag <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(df.digimind$digimind.2star.frag[todo$rarity[i] == 2 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind$digimind.3star.frag[todo$rarity[i] == 3 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind$digimind.4star.frag[todo$rarity[i] == 4 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]])
-                                                )
-                     )
+    sum(df.digimind$digimind.2star.frag[todo$rarity[i] == 2 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+    sum(df.digimind$digimind.3star.frag[todo$rarity[i] == 3 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+    sum(df.digimind$digimind.4star.frag[todo$rarity[i] == 4 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]])
+)
+)
 todo.datasim$digimind.total.core <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                sum(df.digimind$digimind.2star.core[todo$rarity[i] == 2 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind$digimind.3star.core[todo$rarity[i] == 3 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
-                                                sum(df.digimind$digimind.4star.core[todo$rarity[i] == 4 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]])
-                                                )
-                     )
+    sum(df.digimind$digimind.2star.core[todo$rarity[i] == 2 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+    sum(df.digimind$digimind.3star.core[todo$rarity[i] == 3 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]]) +
+    sum(df.digimind$digimind.4star.core[todo$rarity[i] == 4 & df.digimind$digimind.mod > todo$modfrom[i] & df.digimind$digimind.mod <= todo$modto[i]])
+)
+)
 
 todo.datasim$link.total.core <- sapply(seq_len(nrow(todo)), function(i) with(todo,
-                                                                             sum(df.core.doll$core.link.2star[todo$rarity[i] == 2 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
-                                                                             sum(df.core.doll$core.link.3star[todo$rarity[i] == 3 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
-                                                                             sum(df.core.doll$core.link.4star[todo$rarity[i] == 4 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
-                                                                             sum(df.core.doll$core.link.5star[todo$rarity[i] == 5 & df.core.doll$core.link >= todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]])
+    sum(df.core.doll$core.link.2star[todo$rarity[i] == 2 & df.core.doll$core.link > todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+    sum(df.core.doll$core.link.3star[todo$rarity[i] == 3 & df.core.doll$core.link > todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+    sum(df.core.doll$core.link.4star[todo$rarity[i] == 4 & df.core.doll$core.link > todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]]) +
+    sum(df.core.doll$core.link.5star[todo$rarity[i] == 5 & df.core.doll$core.link > todo$linkfrom[i] & df.core.doll$core.link <= todo$linkto[i]])
 )
 )
-#todo.datasim <- add_row(todo.datasim,
-#                        name = "Total", datasim.total.tier1 = sum(todo.datasim$datasim.total.tier1),
-#                        datasim.total.tier2 = sum(todo.datasim$datasim.total.tier2, na.rm = T),
-#                        datasim.total.tier3 = sum(todo.datasim$datasim.total.tier3, na.rm = T),
-#                        digimind.total.frag = sum(todo.datasim$digimind.total.frag, na.rm = T),
-#                        digimind.total.core = sum(todo.datasim$digimind.total.core, na.rm = T))
-
 
 
 ## FILTERING
@@ -127,12 +120,37 @@ df.dolllist.pretty <- df.dolllist[,c("type", "name", "link", "lv", "slv")]
 df.dolllist.pretty$Ringed <- ifelse(is.na(df.dolllist$ring), "No", "Yes")
 df.dolllist.pretty <- df.dolllist.pretty[,c("type", "Ringed" ,"name", "lv", "link", "slv")]
 
-# formatted todo df
+# init pretty var for todo dataframe
 todo.pretty <- todo.datasim
+
+#filtered for better categorizing
+filter.todo.core <- todo.pretty[c("type", "name", "linkfrom", "linkto", "link.total.core")]
+filter.todo.core <- filter.todo.core[complete.cases(filter.todo.core[,3:4]),]
+rownames(filter.todo.core) <- NULL
+filter.todo.core[(nrow(filter.todo.core) + 1), 5] <- sum(filter.todo.core[, 5])
+levels(filter.todo.core$type)[nrow(filter.todo.core) + 1] <- "Total"
+filter.todo.core$type[nrow(filter.todo.core)] <- "Total"
+
+filter.todo.MOD  <- todo.pretty[c("type", "rarity", "name", "modfrom", "modto", "digimind.total.frag", "digimind.total.core")]
+filter.todo.MOD  <- filter.todo.MOD[complete.cases(filter.todo.MOD[,4:5]),]
+rownames(filter.todo.MOD) <- NULL
+filter.todo.MOD[(nrow(filter.todo.MOD) + 1), -(1:5)] <- colSums(filter.todo.MOD[, -(1:5)])
+levels(filter.todo.MOD$type)[nrow(filter.todo.MOD) + 1] <- "Total"
+filter.todo.MOD$type[nrow(filter.todo.MOD)] <- "Total"
+
+filter.todo.slv  <- todo.pretty[c("type", "name", "slvfrom", "slvto",  "datasim.total.tier1", "datasim.total.tier2", "datasim.total.tier3")]
+filter.todo.slv  <- filter.todo.slv[complete.cases(filter.todo.slv[,3:4]),]
+rownames(filter.todo.slv) <- NULL
+filter.todo.slv[(nrow(filter.todo.slv) + 1), -(1:4)] <- sum(filter.todo.slv[, -(1:4)])
+levels(filter.todo.slv$type)[nrow(filter.todo.slv) + 1] <- "Total"
+filter.todo.slv$type[nrow(filter.todo.slv)] <- "Total"
+
+#format .pretty
 todo.pretty[(nrow(todo.datasim) + 1), -(1:9)] <- colSums(todo.pretty[, -(1:9)], na.rm = T)
 levels(todo.pretty$type)[nrow(todo.pretty) + 1] <- "Total"
 todo.pretty$type[nrow(todo.pretty)] <- "Total"
 
+#clean up column names
 colnames(todo.pretty) <- c("Type",
                            "Rarity",
                            "Name",

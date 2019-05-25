@@ -1,11 +1,13 @@
 type rarity name slvfrom slvto modfrom modto linkfrom linkto
 fairyBattl 5 warrior 7 10 NA NA NA NA
 fairyBattl 3 "angery fairy" 4 10 NA NA NA NA
-fairyBattl 5 rescue 8 10 NA NA NA NA
+fairyBattl 5 rescue 7 10 NA NA NA NA
 fairyBattl 5 "1st airstike" 8 10 NA NA NA NA
 fairyBattl 5 "2nd airstike" 8 10 NA NA NA NA
 fairyBattl 5 "1st taunt" 9 10 NA NA NA NA
 fairyBattl 5 "2nd taunt" 9 10 NA NA NA NA
+doll 4 KLIN 1 10 NA NA 3 5
+doll 5 DSR-50 1 10 NA NA 3 5
 doll 5 Groza 1 10 NA NA 1 5
 doll 5 Groza 1 10 NA NA 1 5
 doll 5 Groza 1 10 NA NA 1 5
@@ -21,7 +23,7 @@ doll 3 Z62 9 10 NA NA NA NA
 doll 5 "last G11" 6 10 NA NA NA NA
 doll 4 M16 8 10 NA NA NA NA
 doll 5 NZ75 8 10 NA NA NA NA
-doll 5 CZ75 6 10 NA NA NA NA
+doll 5 CZ75 7 10 NA NA NA NA
 doll 5 5-7 8 10 NA NA NA NA
 doll 5 5-7 7 10 NA NA NA NA
 doll 5 "2nd Grizzly" 1 10 NA NA NA NA
@@ -30,7 +32,6 @@ doll 5 calico 8 10 NA NA NA NA
 doll 4 solt 6 10 NA NA NA NA
 doll 4 "2nd colt" 6 10 NA NA NA NA
 doll 2 nagant 6 10 NA NA NA NA
-doll 5 DSR-50 1 10 NA NA NA NA
 doll 4 KLIN 1 10 NA NA NA NA
 doll 4 M4A1 NA NA 0 3 NA NA
 doll 4 AR-15 NA NA 0 3 NA NA
