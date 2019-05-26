@@ -3,8 +3,10 @@ title: |
   | Othi's Doll Index
 author: |
   | Othi
-  | Last Updated: \today
+  | Last Updated: `r format(Sys.time(), '%d %B, %Y')`
 output:
+    html_document:
+        number_sections: false
     pdf_document:
         number_sections: false
 geometry: "left=1cm,right=1cm,top=2cm,bottom=2cm"
@@ -27,9 +29,23 @@ header-includes:
 source('dataframes.R', chdir = T)
 ```
 
-## doll list highly experimental
-```{r message=F, echo=F}
-kable(df.dolllist.pretty, caption = "Doll List", format="markdown")
+# Doll List
+```{r, message=F, echo=F}
+condformat(df.dolllist.pretty) %>%
+    rule_fill_discrete(type) %>%
+    rule_fill_discrete(name, expression = df.dolllist$rarity,
+                       colours = c("5" = "#FFB600", "4" = "#D6E35A", "3" = "#6BDFCE", "1" = "#DEB6FF")) %>%
+    rule_fill_discrete(Ringed, expression = Ringed == "Yes", colours = c("TRUE" = "#F7AEA5")) %>%
+    #rule_fill_gradient(slv) %>%
+    theme_htmlTable(rnames = FALSE, n.cgroup = rbind(c(1,2,NA),
+                           c(2,2,2)),
+                           cspan.rgroup = 2,
+                           col.columns = c(rep("none", 2),
+                                           rep("#F5FBFF", 5)
+                                          ),
+                           #css.cgroup =c(rep("padding: 0px 20px 0px;", 2),
+                           #              rep("padding: 0px 60px 0px;", 5)),
+                           css.cell = "padding: 0px 40px 0px;")
 ```
 
 ## SLv roadmad
@@ -47,5 +63,7 @@ kable(filter.todo.core, caption="todo", format="markdown")
 kable(filter.todo.MOD, caption="todo", format="markdown")
 ```
 
+
 # other notes and todo
 - conditional formatting, cell color
+- team builing concept and needed tables (3x3)

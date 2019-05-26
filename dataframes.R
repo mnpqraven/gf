@@ -1,6 +1,8 @@
 # IF YOU CHANGED THE FILENAME, YOU NEED TO ALSO CHANGE THE FILENAME HERE
 pathwd<-sub("/dataframes.R","",system("find . -type f -name dataframes.R",intern=T)[1])
 setwd(pathwd)
+library(condformat)
+library(htmlTable)
 library(dplyr)
 library(knitr)
 ## TODO: Integrate with rmd
@@ -112,13 +114,13 @@ ar  <- df.dolllist$type == "AR"
 # sg  <- df.dolllist[df.dolllist$type == "SG",]
 
 ## DISPLAYING
-testfilter <- df.dolllist[ar,c("type","name","lv","slv")]
+#testfilter <- df.dolllist[ar,c("type","name","lv","slv")]
 total.core <- todo.datasim$link.total.core[nrow(todo.datasim)] + todo.datasim$digimind.total.core[nrow(todo.datasim)]
 
 # formatted doll df
-df.dolllist.pretty <- df.dolllist[,c("type", "name", "link", "lv", "slv")]
+df.dolllist.pretty <- df.dolllist[,c("type", "name", "link", "lv", "slv", "mod")]
 df.dolllist.pretty$Ringed <- ifelse(is.na(df.dolllist$ring), "No", "Yes")
-df.dolllist.pretty <- df.dolllist.pretty[,c("type", "Ringed" ,"name", "lv", "link", "slv")]
+df.dolllist.pretty <- df.dolllist.pretty[,c("type", "Ringed" ,"name", "lv","mod", "link", "slv")]
 
 # init pretty var for todo dataframe
 todo.pretty <- todo.datasim
@@ -173,3 +175,6 @@ todo.pretty[todo.pretty == 0] <- NA
 write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = ",", quote = F, row.names=F)
 write.table(todo.datasim, file = "dbs/todolist_output.csv", sep = ",", quote = F, row.names=F)
 
+############ COLOR
+
+#test.data <- round(prop.table(table(df.dolllist[,1:2]),2)*100,1)
