@@ -143,7 +143,7 @@ filter.todo.MOD$type[nrow(filter.todo.MOD)] <- "Total"
 filter.todo.slv  <- todo.pretty[c("type", "name", "slvfrom", "slvto",  "datasim.total.tier1", "datasim.total.tier2", "datasim.total.tier3")]
 filter.todo.slv  <- filter.todo.slv[complete.cases(filter.todo.slv[,3:4]),]
 rownames(filter.todo.slv) <- NULL
-filter.todo.slv[(nrow(filter.todo.slv) + 1), -(1:4)] <- sum(filter.todo.slv[, -(1:4)])
+filter.todo.slv[(nrow(filter.todo.slv) + 1), -(1:4)] <- colSums(filter.todo.slv[, -(1:4)])
 levels(filter.todo.slv$type)[nrow(filter.todo.slv) + 1] <- "Total"
 filter.todo.slv$type[nrow(filter.todo.slv)] <- "Total"
 
