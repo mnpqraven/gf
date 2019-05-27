@@ -32,16 +32,20 @@ source('dataframes.R', chdir = T)
 # Doll List
 ```{r, message=F, echo=F}
 condformat(df.dolllist.pretty) %>%
-    rule_fill_discrete(type) %>%
-    rule_fill_discrete(name, expression = df.dolllist$rarity,
+    rule_fill_discrete(Type) %>%
+    rule_fill_discrete(Name, expression = df.dolllist$rarity,
                        colours = c("5" = "#FFB600", "4" = "#D6E35A", "3" = "#6BDFCE", "1" = "#DEB6FF")) %>%
+    rule_fill_discrete(SLv, expression = SLv == 10, colours = c("TRUE" = "#D6E35A")) %>%
+    rule_fill_discrete(Link, expression = Link == 5, colours = c("TRUE" = "#D6E35A")) %>%
     rule_fill_discrete(Ringed, expression = Ringed == "Yes", colours = c("TRUE" = "#F7AEA5")) %>%
     #rule_fill_gradient(slv) %>%
     theme_htmlTable(rnames = FALSE, n.cgroup = rbind(c(1,2,NA),
                            c(2,2,2)),
                            cspan.rgroup = 2,
-                           col.columns = c(rep("none", 2),
-                                           rep("#F5FBFF", 5)
+                           col.columns = c(rep("none", 1),
+                                           rep("#F5FBFF", 2),
+                                           rep("none", 1),
+                                           rep("#F5FBFF", 3)
                                           ),
                            #css.cgroup =c(rep("padding: 0px 20px 0px;", 2),
                            #              rep("padding: 0px 60px 0px;", 5)),

@@ -170,6 +170,22 @@ colnames(todo.pretty) <- c("Type",
                            "Total Link")
 todo.pretty[todo.pretty == 0] <- NA
 
+a <- c(1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "AR",]),
+       1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "SMG",]),
+       1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "RF",]),
+       1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "HG",]),
+       1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "MG",]),
+       1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "SG",]))
+df.dolllist.pretty$count <- a
+df.dolllist.pretty <- df.dolllist.pretty[c("count", "type", "Ringed", "name", "lv", "mod", "link", "slv")]
+colnames(df.dolllist.pretty) <- c("No.",
+                                  "Type",
+                                  "Ringed",
+                                  "Name",
+                                  "Lv",
+                                  "MOD",
+                                  "Link",
+                                  "SLv")
 ## EXPORTING
 # export to csv
 write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = ",", quote = F, row.names=F)
