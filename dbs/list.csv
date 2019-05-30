@@ -38,7 +38,7 @@ AR  5 "Howa Type 64" 100 10 5 0
 SMG  5 Thompson 100 1 5 0
 SMG  3 Ingram 100 7 5 0
 SMG 1 5 Vector 100 10 5 0
-SMG  3 PPS-43 100 5 5 0
+SMG  3 PPS-43 100 6 5 0
 SMG 1 3 Skorpion 100 10 5 0
 SMG  4 UMP9 100 10 5 0
 SMG  4 UMP45 100 10 5 0
@@ -88,12 +88,13 @@ HG  5 Welrod 100 10 5 0
 HG 1 5 Welrod 100 10 5 0
 HG  5 Welrod 100 10 5 0
 HG  5 Welrod 100 10 5 0
+HG  5 Welrod 50 1 1 0
 HG  5 NZ75 100 8 5 0
 HG  3 Type59 20 1 5 0
 HG  5 Five-Seven 100 10 5 0
 HG  5 Five-Seven 80 7 5 0
 HG  5 Five-Seven 100 8 5 0
-HG  5 CZ75 100 9 5 0
+HG  5 CZ75 100 10 5 0
 HG 1 5 Contender 100 10 5 0
 HG  4 K5 100 10 5 0
 HG  4 K5 100 10 5 0
