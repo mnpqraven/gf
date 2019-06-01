@@ -1,6 +1,6 @@
 type,rarity,name,slvfrom,slvto,modfrom,modto,linkfrom,linkto,datasim.total.tier1,datasim.total.tier2,datasim.total.tier3,digimind.total.frag,digimind.total.core,link.total.core
-fairyBattl,5,rescue,8,10,NA,NA,NA,NA,0,0,1000,0,0,NA
-fairyBattl,5,warrior,7,10,NA,NA,NA,NA,0,0,1200,0,0,NA
+fairyBattl,5,rescue,9,10,NA,NA,NA,NA,0,0,600,0,0,NA
+fairyBattl,5,warrior,8,10,NA,NA,NA,NA,0,0,1000,0,0,NA
 doll,4,KLIN,1,10,NA,NA,3,5,600,1020,500,NA,NA,45
 doll,5,DSR-50,2,10,NA,NA,4,5,500,1020,500,0,0,45
 fairyBattl,3,angery fairy,4,10,NA,NA,NA,NA,0,1200,1200,NA,NA,NA
