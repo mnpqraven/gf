@@ -2,7 +2,7 @@ type rarity name slvfrom slvto modfrom modto linkfrom linkto
 fairyBattl 5 rescue 9 10 NA NA NA NA
 fairyBattl 5 warrior 8 10 NA NA NA NA
 doll 4 KLIN 1 10 NA NA 3 5
-doll 5 DSR-50 2 10 NA NA 4 5
+doll 5 DSR-50 7 10 NA NA 4 5
 fairyBattl 3 "angery fairy" 4 10 NA NA NA NA
 fairyBattl 5 "1st airstike" 8 10 NA NA NA NA
 fairyBattl 5 "2nd airstike" 8 10 NA NA NA NA
