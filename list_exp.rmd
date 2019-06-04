@@ -35,7 +35,10 @@ condformat(df.dolllist.pretty) %>%
     rule_fill_discrete(Type) %>%
     rule_fill_discrete(Name, expression = df.dolllist$rarity,
                        colours = c("5" = "#FFB600", "4" = "#D6E35A", "3" = "#6BDFCE", "1" = "#DEB6FF")) %>%
-    rule_fill_discrete(SLv, expression = SLv == 10, colours = c("TRUE" = "#D6E35A")) %>%
+    rule_fill_discrete(SLv, expression = df.dolllist$slv,
+                       colours = c("10" = "#CBDC2E", "9" = "#DBE770", "8" = "#DBE770",
+                                   "7" = "#70DBE7", "6" = "#70DBE7", "5" = "#70DBE7", "4" = "#70DBE7",
+                                   "3" = "#E77B70", "2" = "#E77B70", "1" = "#E77B70")) %>%
     rule_fill_discrete(Link, expression = Link == 5, colours = c("TRUE" = "#D6E35A")) %>%
     rule_fill_discrete(Ringed, expression = Ringed == "Yes", colours = c("TRUE" = "#F7AEA5")) %>%
     #rule_fill_gradient(slv) %>%
