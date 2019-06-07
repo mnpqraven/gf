@@ -1,6 +1,5 @@
 ---
-title: |
-  | Othi's Doll Index
+title: Othi's Doll Index
 author: |
   | Othi
   | Last Updated: `r format(Sys.time(), '%d %B, %Y')`
