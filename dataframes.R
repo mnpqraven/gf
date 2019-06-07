@@ -194,3 +194,10 @@ write.table(todo.datasim, file = "dbs/todolist_output.csv", sep = ",", quote = F
 ############ COLOR
 
 #test.data <- round(prop.table(table(df.dolllist[,1:2]),2)*100,1)
+
+#merge(x = df.dolllist, y = todo, by = "name", all.y = TRUE)
+#TODO:
+# CSV export to human readable + human input (<space> separator, no double quote)
+# uId NOT NULL to identify which dupe
+# rework todo
+# classify fairyBattl and FairyStrat as types
