@@ -194,3 +194,19 @@ write.table(todo.datasim, file = "dbs/todolist_output.csv", sep = ",", quote = F
 ############ COLOR
 
 #test.data <- round(prop.table(table(df.dolllist[,1:2]),2)*100,1)
+
+#merge(x = df.dolllist, y = todo, by = "name", all.y = TRUE)
+#TODO:
+# CSV export to human readable + human input (<space> separator, no double quote)
+# uId NOT NULL to identify which dupe
+# rework todo (df)
+# classify fairyBattl and FairyStrat as types
+# JOIN done, rearrange $type
+
+merged <- merge(x = df.dolllist, y = todo.datasim, by = "name", all.y = TRUE)
+merged <- merged[c("name", "type.y", "slv", "slvto", "link", "linkto", "mod", "modto",
+                   "datasim.total.tier1", "datasim.total.tier2", "datasim.total.tier3", "digimind.total.frag", "digimind.total.core", "link.total.core")]
+#format total for merge
+merged[(nrow(merged) + 1), -(1:8)] <- colSums(merged[, -(1:8)], na.rm = T)
+levels(merged$type)[nrow(merged) + 1] <- "Total"
+merged$type[nrow(merged)] <- "Total"
