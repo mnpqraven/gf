@@ -1,0 +1,42 @@
+---
+title: singu_title
+author: aut,aut,aut,aut,aut,aut
+output: html_document
+---
+
+# Overall
+cancer
+
+# New Mechanics
+
+### small bullet placeholder
+
+### Hydra
+
+### Agent Fight
+  - Whole team gets a free shield after every miniboss kill, doesn't expire
+  - tactic:
+    - EVA dolls
+    - Night ARs
+
+**rec_team_placeholder**
+
+|[]()| | |
+|-|-|-|
+|AR|Wildcard| |
+|HG|SMG| |
+|AR| | |
+
+### teambuilding
+  - allahu akbar
+  - Dolls
+    - 7 AR teams
+  - Fairies
+    - around 2-69 airstrike
+    - 4-20 shield
+  - n for n
+
+# Vods
+- Vod #1
+</br><iframe width="840" height="480" src="https://www.youtube.com/embed/F2tcHZwSs60" frameborder="0" allowfullscreen></iframe>
+
