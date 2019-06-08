@@ -24,7 +24,7 @@ header-includes:
 \end{verbatim}
 ```
 
-```{r message=FALSE, echo=F}
+```{r message=FALSE, echo=F, warning=F}
 source('dataframes.R', chdir = T)
 ```
 
@@ -71,5 +71,4 @@ kable(filter.todo.MOD, caption="todo", format="markdown")
 
 
 # other notes and todo
-- conditional formatting, cell color
 - team builing concept and needed tables (3x3)

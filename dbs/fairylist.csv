@@ -1,0 +1,4 @@
+type rarity dID name lv slv
+fairyBattl 3 1 Fury 70 6
+fairyBattl 1 2 Fury 1 1
+fairyStrat 1 2 Illumination 1 1

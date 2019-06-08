@@ -42,6 +42,7 @@ Initial locations of the bosses and patrols, as well as their pre-defined routes
 
 ### New Factions <a name="new-factions"></a>
 #### KCCO. Who are they ? <++>placeholder
+  - Yellow dudes?
 
 ### SW Radar <a name="sw-radar"></a>
 - Stepping into this radar tile will remove all KCCO enemies (excluding the 180k Hydras) from the map. This gimmick will also activate with switches (costs 0 AP) - Ceia

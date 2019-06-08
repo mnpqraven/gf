@@ -1,27 +1,10 @@
-type rarity name slvfrom slvto modfrom modto linkfrom linkto
-fairyBattl 5 rescue 9 10 NA NA NA NA
-fairyBattl 5 warrior 8 10 NA NA NA NA
-doll 4 KLIN 1 10 NA NA 4 5
-doll 5 DSR-50 7 10 NA NA NA NA
-fairyBattl 3 "angery fairy" 4 10 NA NA NA NA
-fairyBattl 5 "1st airstike" 8 10 NA NA NA NA
-fairyBattl 5 "2nd airstike" 8 10 NA NA NA NA
-fairyBattl 5 "1st taunt" 9 10 NA NA NA NA
-fairyBattl 5 "2nd taunt" 9 10 NA NA NA NA
-doll 4 M16 8 10 NA NA NA NA
-doll 5 NZ75 8 10 NA NA NA NA
-doll 5 5-7 8 10 NA NA NA NA
-doll 5 5-7 7 10 NA NA NA NA
-doll 5 "2nd Grizzly" 1 10 NA NA NA NA
-doll 2 "1st PPK" 8 10 NA NA NA NA
-doll 5 calico 8 10 NA NA NA NA
-doll 4 solt 6 10 NA NA NA NA
-doll 4 "1st colt" 6 10 NA NA NA NA
-doll 2 nagant 6 10 NA NA NA NA
-doll 4 AR-15 NA NA 0 3 NA NA
-doll 4 M4A1 NA NA 0 3 NA NA
-fairyStrat 1 "2nd Illu" 1 10 NA NA NA NA
-doll 2 "2nd PPK" 1 10 NA NA NA NA
-doll 4 UMP45 NA NA 0 3 NA NA
-doll 5 OTs-14 1 10 NA NA 3 5
-doll 5 "last G11" 7 10 NA NA NA NA
+type rarity dID name slvto modto linkto
+doll 4 1 KLIN 10 NA NA
+doll 5 1 DSR-50 10 NA NA
+fairyStrat 1 2 Illumination 10 NA NA
+doll 4 1 M4A1 NA 3 NA
+doll 5 5 G11 10 NA 5
+doll 5 2 OTs-14 10 NA 5
+doll 5 3 OTs-14 10 NA 5
+doll 5 4 OTs-14 10 NA 5
+doll 5 8 OTs-14 10 NA 5
