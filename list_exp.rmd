@@ -54,6 +54,23 @@ condformat(df.dolllist.pretty) %>%
                            css.cell = "padding: 0px 40px 0px;")
 ```
 
+# Fairy List
+```{r message=F, echo=F, warning=F}
+condformat(df.fairylist.pretty) %>%
+    rule_fill_discrete(Type) %>%
+    rule_fill_discrete(SLv, expression = df.fairylist$slv,
+                       colours = c("10" = "#CBDC2E", "9" = "#DBE770", "8" = "#DBE770",
+                                   "7" = "#70DBE7", "6" = "#70DBE7", "5" = "#70DBE7", "4" = "#70DBE7",
+                                   "3" = "#E77B70", "2" = "#E77B70", "1" = "#E77B70")) %>%
+    theme_htmlTable(rnames = FALSE, n.cgroup = rbind(c(1,2,NA),
+                           c(2,2,2)),
+                           cspan.rgroup = 2,
+                           col.columns = c(rep("#F5FBFF", 4),
+                                           rep("none", 1)
+                                          ),
+                           css.cell = "padding: 0px 70px 0px;")
+```
+
 ## SLv roadmad
 ```{r message=F, echo=F}
 kable(filter.todo.slv, caption="todo", format="markdown")
