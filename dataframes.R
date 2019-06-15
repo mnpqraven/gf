@@ -11,9 +11,9 @@ library(plyr)
 
 ## DOLL TABLE
 # read the doll list table
-df.dolllist = read.table(file="dbs/list.csv", header = T, sep = " ")
-todo = read.table(file="dbs/todo.csv", header = T, sep = " ")
-df.fairylist = read.table(file="dbs/fairylist.csv", header = T, sep = " ")
+df.dolllist = read.table(file="dbs/dolllist.csv", header = T, sep = ",")
+todo = read.table(file="dbs/todolist.csv", header = T, sep = ",")
+df.fairylist = read.table(file="dbs/fairylist.csv", header = T, sep = ",")
 
 ## DATA MANIPULATION
 # core table
@@ -75,7 +75,7 @@ df.digimind <- as.data.frame(cbind(digimind.mod, digimind.2star.frag, digimind.2
 
 # formatted doll df
 df.dolllist.pretty <- df.dolllist[,c("type", "name", "link", "lv", "slv", "mod")]
-df.dolllist.pretty$Ringed <- ifelse(is.na(df.dolllist$ring), "No", "Yes")
+df.dolllist.pretty$Ringed <- ifelse(df.dolllist$ring == 1, "Yes", "No")
 df.dolllist.pretty <- df.dolllist.pretty[,c("type", "Ringed" ,"name", "lv","mod", "link", "slv")]
 
 # init pretty var for todo dataframe
@@ -119,6 +119,7 @@ colnames(df.fairylist.pretty) <- c("Type", "Rarity", "Name", "Lv", "SLv")
 # export to csv
 write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = ",", quote = F, row.names=F)
 write.table(todo, file = "dbs/todolist_output.csv", sep = ",", quote = F, row.names=F)
+write.table(df.fairylist, file = "dbs/df.fairylist_output.csv", sep = ",", quote = F, row.names=F)
 
 
 #TODO:
@@ -182,7 +183,7 @@ filter.todo.MOD  <- filter.todo.MOD[complete.cases(filter.todo.MOD[,4]),]
 rownames(filter.todo.MOD) <- NULL
 filter.todo.MOD[(nrow(filter.todo.MOD) + 1), -(1:4)] <- colSums(filter.todo.MOD[, -(1:4)])
 filter.todo.MOD$type.y[nrow(filter.todo.MOD)] <- "Total"
-colnames(filter.todo.MOD) <- c("Type", "Rarity", "Name", "Mod Goal", "Fragments Needed", "Cores Needed") 
+colnames(filter.todo.MOD) <- c("Type", "Rarity", "Name", "Mod Goal", "Fragments Needed", "Cores Needed")
 
 filter.todo.slv  <- fulltodo[c("type.y", "name", "slv", "slvto",  "datasim.total.tier1", "datasim.total.tier2", "datasim.total.tier3")]
 filter.todo.slv  <- filter.todo.slv[complete.cases(filter.todo.slv[,4]),]
