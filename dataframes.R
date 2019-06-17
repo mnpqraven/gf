@@ -117,9 +117,9 @@ df.fairylist.pretty <- df.fairylist[c("type", "rarity", "name","lv", "slv")]
 colnames(df.fairylist.pretty) <- c("Type", "Rarity", "Name", "Lv", "SLv")
 ## EXPORTING
 # export to csv
-write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = ",", quote = F, row.names=F)
-write.table(todo, file = "dbs/todolist_output.csv", sep = ",", quote = F, row.names=F)
-write.table(df.fairylist, file = "dbs/df.fairylist_output.csv", sep = ",", quote = F, row.names=F)
+# write.table(df.dolllist, file = "dbs/dolllist_output.csv", sep = ",", quote = F, row.names=F)
+# write.table(todo, file = "dbs/todolist_output.csv", sep = ",", quote = F, row.names=F)
+# write.table(df.fairylist, file = "dbs/df.fairylist_output.csv", sep = ",", quote = F, row.names=F)
 
 
 #TODO:
@@ -128,22 +128,25 @@ write.table(df.fairylist, file = "dbs/df.fairylist_output.csv", sep = ",", quote
 
 df.joined.fairy.doll <- full_join(df.dolllist, df.fairylist, copy = TRUE)
 fulltodo <- merge(todo, df.joined.fairy.doll, by.x = c("name", "dID"), by.y = c("name", "dID"))
-fulltodo <- fulltodo[c("type.y", "rarity.y", "name", "lv", "slv", "slvto", "link", "linkto", "mod", "modto")]
+fulltodo <- fulltodo[c("type.y", "rarity.y", "name", "lv", "slv", "slv2", "slvto", "slv2to", "link", "linkto", "mod", "modto")]
 
 fulltodo$datasim.total.tier1 <- sapply(seq_len(nrow(fulltodo)), function(i) with(fulltodo,
 sum(df.datasim.fairyStrat$datasim.fairyStrat.tier1[fulltodo$type.y[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= fulltodo$slv[i] & df.datasim.fairyStrat$datasim.slv < fulltodo$slvto[i]]) +
 sum(df.datasim.fairyBattl$datasim.fairyBattl.tier1[fulltodo$type.y[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= fulltodo$slv[i] & df.datasim.fairyBattl$datasim.slv < fulltodo$slvto[i]]) +
-sum(df.datasim.doll$datasim.doll.tier1[fulltodo$type[i] != "fairyStrat" & fulltodo$type[i] != "fairyBattl" & df.datasim.doll$datasim.slv >= fulltodo$slv[i] & df.datasim.doll$datasim.slv < fulltodo$slvto[i]])
+sum(df.datasim.doll$datasim.doll.tier1[fulltodo$type[i] != "fairyStrat" & fulltodo$type[i] != "fairyBattl" & df.datasim.doll$datasim.slv >= fulltodo$slv[i] & df.datasim.doll$datasim.slv < fulltodo$slvto[i]]) +
+sum(df.datasim.doll$datasim.doll.tier1[!is.na(fulltodo$slv2[i]) & df.datasim.doll$datasim.slv >= fulltodo$slv2[i] & df.datasim.doll$datasim.slv < fulltodo$slv2to[i]])
 ))
 fulltodo$datasim.total.tier2 <- sapply(seq_len(nrow(fulltodo)), function(i) with(fulltodo,
 sum(df.datasim.fairyStrat$datasim.fairyStrat.tier2[fulltodo$type.y[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= fulltodo$slv[i] & df.datasim.fairyStrat$datasim.slv < fulltodo$slvto[i]]) +
 sum(df.datasim.fairyBattl$datasim.fairyBattl.tier2[fulltodo$type.y[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= fulltodo$slv[i] & df.datasim.fairyBattl$datasim.slv < fulltodo$slvto[i]]) +
-sum(df.datasim.doll$datasim.doll.tier2[fulltodo$type[i] != "fairyStrat" & fulltodo$type[i] != "fairyBattl" & df.datasim.doll$datasim.slv >= fulltodo$slv[i] & df.datasim.doll$datasim.slv < fulltodo$slvto[i]])
+sum(df.datasim.doll$datasim.doll.tier2[fulltodo$type[i] != "fairyStrat" & fulltodo$type[i] != "fairyBattl" & df.datasim.doll$datasim.slv >= fulltodo$slv[i] & df.datasim.doll$datasim.slv < fulltodo$slvto[i]]) +
+sum(df.datasim.doll$datasim.doll.tier2[!is.na(fulltodo$slv2[i]) & df.datasim.doll$datasim.slv >= fulltodo$slv2[i] & df.datasim.doll$datasim.slv < fulltodo$slv2to[i]])
 ))
 fulltodo$datasim.total.tier3 <- sapply(seq_len(nrow(fulltodo)), function(i) with(fulltodo,
 sum(df.datasim.fairyStrat$datasim.fairyStrat.tier3[fulltodo$type.y[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= fulltodo$slv[i] & df.datasim.fairyStrat$datasim.slv < fulltodo$slvto[i]]) +
 sum(df.datasim.fairyBattl$datasim.fairyBattl.tier3[fulltodo$type.y[i] == "fairyBattl" & df.datasim.fairyBattl$datasim.slv >= fulltodo$slv[i] & df.datasim.fairyBattl$datasim.slv < fulltodo$slvto[i]]) +
-sum(df.datasim.doll$datasim.doll.tier3[fulltodo$type[i] != "fairyStrat" & fulltodo$type[i] != "fairyBattl" & df.datasim.doll$datasim.slv >= fulltodo$slv[i] & df.datasim.doll$datasim.slv < fulltodo$slvto[i]])
+sum(df.datasim.doll$datasim.doll.tier3[fulltodo$type[i] != "fairyStrat" & fulltodo$type[i] != "fairyBattl" & df.datasim.doll$datasim.slv >= fulltodo$slv[i] & df.datasim.doll$datasim.slv < fulltodo$slvto[i]]) +
+sum(df.datasim.doll$datasim.doll.tier3[!is.na(fulltodo$slv2[i]) & df.datasim.doll$datasim.slv >= fulltodo$slv2[i] & df.datasim.doll$datasim.slv < fulltodo$slv2to[i]])
 ))
 fulltodo$digimind.total.frag <- sapply(seq_len(nrow(fulltodo)), function(i) with(fulltodo,
 sum(df.digimind$digimind.2star.frag[fulltodo$rarity[i] == 2 & df.digimind$digimind.mod > fulltodo$mod[i] & df.digimind$digimind.mod <= fulltodo$modto[i]]) +
@@ -172,7 +175,7 @@ fulltodo.total$name[nrow(fulltodo)] <- "Total"
 #filtered for better categorizing
 filter.todo.core <- fulltodo[c("type.y", "rarity.y", "name", "link", "linkto", "link.total.core")]
 #catch only non-NAs
-filter.todo.core <- filter.todo.core[complete.cases(filter.todo.core[,5]),]
+filter.todo.core <- filter.todo.core[filter.todo.core$link.total.core != 0,]
 rownames(filter.todo.core) <- NULL
 filter.todo.core[(nrow(filter.todo.core) + 1), 6] <- sum(filter.todo.core[, 6])
 filter.todo.core$type.y[nrow(filter.todo.core)] <- "Total"
@@ -185,9 +188,9 @@ filter.todo.MOD[(nrow(filter.todo.MOD) + 1), -(1:4)] <- colSums(filter.todo.MOD[
 filter.todo.MOD$type.y[nrow(filter.todo.MOD)] <- "Total"
 colnames(filter.todo.MOD) <- c("Type", "Rarity", "Name", "Mod Goal", "Fragments Needed", "Cores Needed")
 
-filter.todo.slv  <- fulltodo[c("type.y", "name", "slv", "slvto",  "datasim.total.tier1", "datasim.total.tier2", "datasim.total.tier3")]
-filter.todo.slv  <- filter.todo.slv[complete.cases(filter.todo.slv[,4]),]
+filter.todo.slv  <- fulltodo[c("type.y", "name", "slv", "slvto", "slv2to", "datasim.total.tier1", "datasim.total.tier2", "datasim.total.tier3")]
+filter.todo.slv  <- filter.todo.slv[!is.na(filter.todo.slv$slvto) | !is.na(filter.todo.slv$slv2to),]
 rownames(filter.todo.slv) <- NULL
 filter.todo.slv[(nrow(filter.todo.slv) + 1), -(1:4)] <- colSums(filter.todo.slv[, -(1:4)])
 filter.todo.slv$type.y[nrow(filter.todo.slv)] <- "Total"
-colnames(filter.todo.slv) <- c("Type", "Name", "SLv", "SLv Goal", "Basic", "Intermediate", "Advanced")
+colnames(filter.todo.slv) <- c("Type", "Name", "SLv", "SLv Goal","SLv2 Goal", "Basic", "Intermediate", "Advanced")
