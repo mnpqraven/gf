@@ -1,3 +1,4 @@
+library(dplyr)
 example <- array(dim=c(3, 3, 1)) 
 example[,,1] <- rbind(c(7,8,9),
                       c(4,5,6),
