@@ -6,6 +6,7 @@ library(htmlTable)
 library(dplyr)
 library(knitr)
 library(plyr)
+library(kableExtra)
 ## TODO: Integrate with rmd
 ## https://stackoverflow.com/questions/10966109/how-to-source-r-markdown-file-like-sourcemyfile-r
 
@@ -128,7 +129,7 @@ colnames(df.fairylist.pretty) <- c("Type", "Rarity", "Name", "Lv", "SLv")
 
 df.joined.fairy.doll <- full_join(df.dolllist, df.fairylist, copy = TRUE)
 fulltodo <- merge(todo, df.joined.fairy.doll, by.x = c("name", "dID"), by.y = c("name", "dID"))
-fulltodo <- fulltodo[c("type.y", "rarity.y", "name", "lv", "slv", "slv2", "slvto", "slv2to", "link", "linkto", "mod", "modto")]
+fulltodo <- fulltodo[c("type.y", "rarity.y", "dID", "name", "lv", "slv", "slv2", "slvto", "slv2to", "link", "linkto", "mod", "modto")]
 
 fulltodo$datasim.total.tier1 <- sapply(seq_len(nrow(fulltodo)), function(i) with(fulltodo,
 sum(df.datasim.fairyStrat$datasim.fairyStrat.tier1[fulltodo$type.y[i] == "fairyStrat" & df.datasim.fairyStrat$datasim.slv >= fulltodo$slv[i] & df.datasim.fairyStrat$datasim.slv < fulltodo$slvto[i]]) +
@@ -173,20 +174,20 @@ levels(fulltodo.total$name)[nrow(fulltodo) + 1] <- "Total"
 fulltodo.total$name[nrow(fulltodo)] <- "Total"
 
 #filtered for better categorizing
-filter.todo.core <- fulltodo[c("type.y", "rarity.y", "name", "link", "linkto", "link.total.core")]
+filter.todo.core <- fulltodo[c("type.y", "name", "link", "linkto", "link.total.core", "dID", "rarity.y")]
 #catch only non-NAs
-filter.todo.core <- filter.todo.core[filter.todo.core$link.total.core != 0,]
+filter.todo.core <- filter.todo.core[!is.na(filter.todo.core$link.total.core) & filter.todo.core$link.total.core != 0,]
 rownames(filter.todo.core) <- NULL
-filter.todo.core[(nrow(filter.todo.core) + 1), 6] <- sum(filter.todo.core[, 6])
+filter.todo.core[(nrow(filter.todo.core) + 1), 5] <- sum(filter.todo.core[, 5])
 filter.todo.core$type.y[nrow(filter.todo.core)] <- "Total"
-colnames(filter.todo.core) <- c("Type", "Rarity", "Name", "Current Link", "Link Goal", "Cores needed")
+colnames(filter.todo.core) <- c("Type", "Name", "Current Link", "Link Goal", "Cores needed", "dID", "rarity.y")
 
-filter.todo.MOD  <- fulltodo[c("type.y", "rarity.y", "name",  "modto", "digimind.total.frag", "digimind.total.core")]
-filter.todo.MOD  <- filter.todo.MOD[complete.cases(filter.todo.MOD[,4]),]
+filter.todo.MOD  <- fulltodo[c("type.y", "name",  "modto", "digimind.total.frag", "digimind.total.core", "dID", "rarity.y")]
+filter.todo.MOD  <- filter.todo.MOD[complete.cases(filter.todo.MOD[,3]),]
 rownames(filter.todo.MOD) <- NULL
-filter.todo.MOD[(nrow(filter.todo.MOD) + 1), -(1:4)] <- colSums(filter.todo.MOD[, -(1:4)])
+filter.todo.MOD[(nrow(filter.todo.MOD) + 1), -(1:3)] <- colSums(filter.todo.MOD[, -(1:3)])
 filter.todo.MOD$type.y[nrow(filter.todo.MOD)] <- "Total"
-colnames(filter.todo.MOD) <- c("Type", "Rarity", "Name", "Mod Goal", "Fragments Needed", "Cores Needed")
+colnames(filter.todo.MOD) <- c("Type", "Name", "Mod Goal", "Fragments Needed", "Cores Needed", "dID", "rarity.y")
 
 filter.todo.slv  <- fulltodo[c("type.y", "name", "slv", "slvto", "slv2to", "datasim.total.tier1", "datasim.total.tier2", "datasim.total.tier3")]
 filter.todo.slv  <- filter.todo.slv[!is.na(filter.todo.slv$slvto) | !is.na(filter.todo.slv$slv2to),]
