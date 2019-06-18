@@ -1,0 +1,22 @@
+---
+title: teamtest
+author: |
+  | Othi
+  | Last Updated: `r format(Sys.time(), '%d %B, %Y')`
+output:
+    html_document:
+        number_sections: false
+    pdf_document:
+        number_sections: false
+geometry: "left=1cm,right=1cm,top=2cm,bottom=2cm"
+classoption: landscape
+header-includes:
+    - \usepackage{datetime}
+---
+
+```{r}
+library(dplyr,knitr)
+require(knitr)
+source('ranking-teams-db.R')
+print.team(1)
+```
