@@ -14,9 +14,10 @@ header-includes:
     - \usepackage{datetime}
 ---
 
-```{r}
-library(dplyr,knitr)
-require(knitr)
+```{r echo=F,message=F}
 source('ranking-teams-db.R')
-print.team(1)
+print.team(rank.dd,1)
+print.team(rank.dd,2)
+print.team(rank.dd,3)
+print.team(rank.dd,4)
 ```
