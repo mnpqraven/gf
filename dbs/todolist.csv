@@ -7,7 +7,7 @@ fairyBattl,NA,2,Airstrike,10,NA,NA,NA
 fairyBattl,NA,3,Airstrike,10,NA,NA,NA
 doll,4,1,M4A1,NA,10,3,NA
 doll,4,1,ST AR-15,NA,10,3,NA
-doll,3,1,SCW,8,NA,NA,NA
+doll,3,1,SCW,NA,NA,NA,NA
 doll,5,5,G11,10,NA,NA,5
 doll,5,2,OTs-14,8,NA,NA,5
 doll,5,3,OTs-14,8,NA,NA,5
@@ -19,8 +19,8 @@ doll,5,8,OTs-14,8,NA,NA,5
 doll,5,9,OTs-14,8,NA,NA,5
 doll,5,10,OTs-14,8,NA,NA,5
 doll,5,1,PM-06,8,NA,NA,5
-doll,5,1,TAC-50,8,NA,NA,5
-doll,5,1,Mk48,10,NA,NA,5
+doll,5,1,TAC-50,NA,NA,NA,5
+doll,5,1,Mk48,8,NA,NA,5
 doll,5,3,PK,10,NA,NA,5
 doll,5,1,IWS 2000,10,NA,NA,5
 doll,5,2,IWS 2000,10,NA,NA,5

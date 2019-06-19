@@ -33,10 +33,10 @@ colorSG <-         "#ca9df2"
 colorFairyStrat <- "#6bc3ff"
 colorFairyBattl <- "#ff6866"
 colorTotal <-      "yellow"
-colorRarity5 <- "#FFB600"
-colorRarity4 <- "#D6E35A"
-colorRarity3 <- "#6BDFCE"
-colorRarity1 <- "#DEB6FF"
+colorRarity5 <-    "#FFB600"
+colorRarity4 <-    "#D6E35A"
+colorRarity3 <-    "#6BDFCE"
+colorRarity1 <-    "#DEB6FF"
 ```
 
 # Doll List
