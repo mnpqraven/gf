@@ -43,7 +43,7 @@ server <- function(input, output) {
       Lv = cell_spec(Lv,color = spec_color(Lv, begin = 0, end = 1, option = "A", direction = -1), background = spec_color(Lv, begin = 0.5, end = 0.9, option = "D")),
       Link = cell_spec(Link, color = ifelse(Link == 5, "green", "black")),
       SLv = cell_spec(SLv,color = spec_color(SLv, begin = 0, end = 1, option = "A", direction = -1), background = spec_color(SLv, begin = 0.5, end = 0.9, option = "D"))) %>%
-      filter(df.dolllist.pretty$Lv <= input$Lv & df.dolllist.pretty$SLv <= input$SLv & df.dolllist.pretty$Link <= input$Link & (df.dolllist.pretty$MOD >= input$MOD[1] & df.dolllist.pretty$MOD <= input$MOD[2])) %>%
+      filter(df.dolllist.pretty$Lv <= input$Lv & df.dolllist.pretty$SLv <= input$SLv & df.dolllist.pretty$Link <= input$Link & (df.dolllist.pretty$MOD >= min(input$MOD) & df.dolllist.pretty$MOD <= max(input$MOD))) %>%
       kable(format = "html", escape = F, align = c("rcclclll")) %>%
       kable_styling("striped", full_width = T) %>%
       column_spec(1:8,extra_css = "vertical-align:middle;") %>%

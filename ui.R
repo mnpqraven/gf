@@ -36,7 +36,7 @@ ui <- fluidPage(
                                                               min = 1, max = 10, value = 10),
                                                   sliderInput("Link", "link Limit",
                                                               min = 1, max = 5, value = 5),
-                                                  sliderInput("MOD", "MOD limit",
+                                                  sliderInput("MOD", "MOD limit (error means no result)",
                                                               min = 0, max = 3, value = c(0,3))
                                                   ),
                                      mainPanel(
