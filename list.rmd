@@ -3,11 +3,8 @@ title: Othi's Doll Index
 author: |
   | Last updated: `r format(Sys.time(), '%d %B, %Y')`
 output:
-    html_document:
-        number_sections: false
-    pdf_document:
-        number_sections: false
-classoption: landscape
+    html_document
+runtime: shiny
 header-includes:
     - \usepackage{datetime}
 ---
@@ -23,6 +20,7 @@ header-includes:
 ```
 
 ```{r message=FALSE, echo=F, warning=F}
+source('readtable_offline.R', chdir = T)
 source('dataframes.R', chdir = T)
 colorAR <-         "#97c9ae"
 colorSMG <-        "#ae97c9"
@@ -43,7 +41,7 @@ colorRarity1 <-    "#DEB6FF"
 ```{r, message=F, echo=F}
 df.dolllist.pretty %>%
   mutate(
-    Ringed = cell_spec(Ringed, "html", background = ifelse(Ringed == "Yes","#F7AEA5","white")),
+    Ringed = cell_spec(Ringed, "html", background = ifelse(Ringed == "Yes","#F7AEA5","NULL")),
     Name = cell_spec(Name, "html", background =
       ifelse(df.dolllist$rarity == 5 | (df.dolllist$rarity == 4 & df.dolllist$mod > 0), colorRarity5,
       ifelse(df.dolllist$rarity == 4 | ((df.dolllist$rarity == 3 | df.dolllist$rarity == 2) & df.dolllist$mod > 0), colorRarity4,
@@ -63,7 +61,7 @@ df.dolllist.pretty %>%
   #select(Type) %>%
   kable(format = "html", escape = F, align = c("rcclclll")) %>%
   column_spec(1:8,extra_css = "vertical-align:middle;") %>%
-  kable_styling(c("bordered"), fixed_thead=T)
+  kable_styling(c("bordered", "striped", "condensed", "hover"), fixed_thead=T)
 ```
 
 # SLv roadmad
@@ -88,7 +86,7 @@ filter.todo.slv %>%
                      background_as_tile=F, font_size = 18),
    ) %>%
   kable(format = "html", escape = F, align = c("cllllrrr")) %>%
-  kable_styling(c("bordered"), fixed_thead=T) %>%
+  kable_styling(c("bordered", "striped", "hover"), fixed_thead=T) %>%
   column_spec(1:8,extra_css = "vertical-align:middle;") %>%
   column_spec(1, width = "8em") %>%
   column_spec(3, width = "5em") %>%
@@ -123,7 +121,7 @@ filter.todo.core %>%
   select(-dID,-rarity.y) %>%
   #kable(format = "html", escape = F, align = c("clllr")) %>%
   kable(format = "html", escape = F, align = c("cllrr")) %>%
-  kable_styling(c("bordered"), fixed_thead=T) %>%
+  kable_styling(c("bordered", "striped", "hover"), fixed_thead=T) %>%
   column_spec(1:5,extra_css = "vertical-align:middle;") %>%
   column_spec(1, width = "8em") %>%
   column_spec(3, width = "10em") %>%
@@ -154,7 +152,7 @@ filter.todo.MOD %>%
   ) %>%
   select(-rarity.y, -dID) %>%
   kable(format = "html", escape = F, align = c("cllrr")) %>%
-  kable_styling(c("bordered"), fixed_thead=T) %>%
+  kable_styling(c("bordered", "striped", "hover"), fixed_thead=T) %>%
   column_spec(1:5,extra_css = "vertical-align:middle;") %>%
   column_spec(1, width = "8em") %>%
   column_spec(3, width = "10em") %>%

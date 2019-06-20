@@ -7,14 +7,12 @@ library(dplyr)
 library(knitr)
 library(plyr)
 library(kableExtra)
+library(data.table)
 ## TODO: Integrate with rmd
 ## https://stackoverflow.com/questions/10966109/how-to-source-r-markdown-file-like-sourcemyfile-r
 
 ## DOLL TABLE
 # read the doll list table
-df.dolllist = read.table(file="dbs/dolllist.csv", header = T, sep = ",")
-todo = read.table(file="dbs/todolist.csv", header = T, sep = ",")
-df.fairylist = read.table(file="dbs/fairylist.csv", header = T, sep = ",")
 
 ## DATA MANIPULATION
 # core table
@@ -83,19 +81,19 @@ df.dolllist.pretty <- df.dolllist.pretty[,c("type", "Ringed" ,"name", "lv","mod"
 todo.pretty <- todo
 
 #format .pretty
-todo.pretty[(nrow(todo.pretty) + 1), -(1:9)] <- colSums(todo.pretty[, -(1:9)], na.rm = T)
-levels(todo.pretty$type)[nrow(todo.pretty) + 1] <- "Total"
-todo.pretty$type[nrow(todo.pretty)] <- "Total"
+#todo.pretty[(nrow(todo.pretty) + 1), -(1:9)] <- colSums(todo.pretty[, -(1:9)], na.rm = T)
+#levels(todo.pretty$type)[nrow(todo.pretty) + 1] <- "Total"
+#todo.pretty$type[nrow(todo.pretty)] <- "Total"
 
 #clean up column names
-colnames(todo.pretty) <- c("Type",
-                           "Rarity",
-                           "Dupe ID",
-                           "Name",
-                           "Goal SLv",
-                           "To MOD",
-                           "To Link")
-todo.pretty[todo.pretty == 0] <- NA
+#colnames(todo.pretty) <- c("Type",
+#                           "Rarity",
+#                           "Dupe ID",
+#                           "Name",
+#                           "Goal SLv",
+#                           "To MOD",
+#                           "To Link")
+#todo.pretty[todo.pretty == 0] <- NA
 
 a <- c(1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "AR",]),
        1:nrow(df.dolllist.pretty[df.dolllist.pretty$type == "SMG",]),
