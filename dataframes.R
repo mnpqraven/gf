@@ -165,6 +165,7 @@ sum(df.core.doll$core.link.4star[fulltodo$rarity[i] == 4 & df.core.doll$core.lin
 sum(df.core.doll$core.link.5star[fulltodo$rarity[i] == 5 & df.core.doll$core.link > fulltodo$link[i] & df.core.doll$core.link <= fulltodo$linkto[i]])
 ))
 
+fulltodo <- fulltodo[!(is.na(fulltodo$slvto) & is.na(fulltodo$slv2to) & is.na(fulltodo$modto) & is.na(fulltodo$linkto)),]
 #format total for merge
 fulltodo.total <- fulltodo
 fulltodo.total[(nrow(fulltodo) + 1), -(1:9)] <- colSums(fulltodo[, -(1:9)], na.rm = T)

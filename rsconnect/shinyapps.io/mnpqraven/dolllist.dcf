@@ -5,9 +5,9 @@ account: mnpqraven
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 990609
-bundleId: 2167968
+bundleId: 2168132
 url: https://mnpqraven.shinyapps.io/dolllist/
-when: 1561072186.12355
+when: 1561078865.38348
 asMultiple: FALSE
 asStatic: FALSE
-ignoredFiles: filter.html|index.html|list.html|list.rmd|listdoll.csv|listtodo.csv|new.pdf|readme.md
+ignoredFiles: filter.html|index.html|list.html|list.rmd|listdoll.csv|listtodo.csv|readme.md|img/ring.png|img/ring2.png|singu/img/map.png

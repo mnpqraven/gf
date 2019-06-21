@@ -107,9 +107,9 @@ server <- function(input, output) {
     kable_styling(c("bordered", "striped", "hover"), fixed_thead=T) %>%
     column_spec(1:5,extra_css = "vertical-align:middle;") %>%
     column_spec(1, width = "8em") %>%
-    column_spec(3, width = "10em") %>%
-    column_spec(4, width = "12em") %>%
-    column_spec(5, width = "12em") %>%
+    column_spec(3, width = "8em") %>%
+    column_spec(4, width = "10em") %>%
+    column_spec(5, width = "10em") %>%
     row_spec(nrow(filter.todo.core), background = colorTotal, bold=T)
   }
 
@@ -137,9 +137,9 @@ filter.todo.MOD %>%
   kable_styling(c("bordered", "striped", "hover"), fixed_thead=T) %>%
   column_spec(1:5,extra_css = "vertical-align:middle;") %>%
   column_spec(1, width = "8em") %>%
-  column_spec(3, width = "10em") %>%
-  column_spec(4, width = "12em") %>%
-  column_spec(5, width = "12em") %>%
+  column_spec(3, width = "8em") %>%
+  column_spec(4, width = "10em") %>%
+  column_spec(5, width = "10em") %>%
   row_spec(nrow(filter.todo.MOD), background = colorTotal, bold=T)
   }
 
