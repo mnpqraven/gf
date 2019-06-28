@@ -3,8 +3,8 @@ library(shiny)
 server <- function(input, output) {
   library(dplyr)
   library(kableExtra)
-  #source('readtable_offline.R')
-  source('readtable_online.R')
+  source('readtable_offline.R')
+  #source('readtable_online.R')
   source('dataframes.R')
   colorAR <-         "#97c9ae"
   colorSMG <-        "#ae97c9"
