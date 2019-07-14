@@ -72,13 +72,14 @@ server <- function(input, output) {
     kable(format = "html", escape = F, align = c("cllllrrr")) %>%
     kable_styling(c("bordered", "striped", "hover"), fixed_thead=T) %>%
     column_spec(1:8,extra_css = "vertical-align:middle;") %>%
-    column_spec(1, width = "8em") %>%
-    column_spec(3, width = "5em") %>%
+    column_spec(1, width = "7em") %>%
+    column_spec(2, width = "7em") %>%
     column_spec(4, width = "6.5em") %>%
     column_spec(5, width = "6.5em") %>%
-    column_spec(6, width = "8em") %>%
+    column_spec(6, width = "6.5em") %>%
     column_spec(7, width = "8em") %>%
     column_spec(8, width = "8em") %>%
+    column_spec(9, width = "8em") %>%
     row_spec(nrow(filter.todo.slv), background = colorTotal, bold=T)
   }
 
