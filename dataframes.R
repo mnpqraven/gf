@@ -194,3 +194,4 @@ rownames(filter.todo.slv) <- NULL
 filter.todo.slv[(nrow(filter.todo.slv) + 1), -(1:4)] <- colSums(filter.todo.slv[, -(1:4)])
 filter.todo.slv$type.y[nrow(filter.todo.slv)] <- "Total"
 colnames(filter.todo.slv) <- c("Type", "Name", "SLv", "SLv Goal","SLv2 Goal", "Basic", "Intermediate", "Advanced")
+filter.todo.slv <- filter.todo.slv[!(filter.todo.slv$Intermediate=="0" & filter.todo.slv$Basic == "0" & filter.todo.slv$Advanced == "0" ),]
