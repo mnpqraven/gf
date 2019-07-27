@@ -1,10 +1,12 @@
 type,rarity,dID,name,slvto,slv2to,modto,linkto
 doll,4,1,KLIN,10,NA,NA,NA
+doll,5,2,Vector,10,NA,NA,NA
 fairyStrat,NA,2,Illumination,10,NA,NA,NA
 fairyStrat,NA,3,Illumination,10,NA,NA,NA
 fairyBattl,NA,1,Airstrike,10,NA,NA,NA
 fairyBattl,NA,2,Airstrike,10,NA,NA,NA
 fairyBattl,NA,3,Airstrike,10,NA,NA,NA
+fairyBattl,NA,1,Rescue,10,NA,NA,NA
 doll,4,1,M4A1,NA,10,3,NA
 doll,4,1,ST AR-15,NA,10,3,NA
 doll,4,3,Mk23,NA,NA,NA,5
@@ -25,9 +27,7 @@ doll,5,1,PM-06,8,NA,NA,5
 doll,5,1,TAC-50,NA,NA,NA,5
 doll,5,1,Mk48,8,NA,NA,5
 doll,5,3,PK,8,NA,NA,5
-doll,5,1,IWS 2000,10,NA,NA,5
 doll,5,2,IWS 2000,10,NA,NA,5
 doll,4,1,Ribeyrolles,10,NA,NA,5
 doll,5,1,CarcanoM91/38,10,NA,NA,5
 doll,5,1,MDR,10,NA,NA,5
-doll,5,1,C-MS,10,NA,NA,5
