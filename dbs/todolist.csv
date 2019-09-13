@@ -1,32 +1,30 @@
 type,rarity,dID,name,slvto,slv2to,modto,linkto
 doll,4,1,KLIN,10,NA,NA,NA
-doll,5,2,Vector,10,NA,NA,NA
+doll,5,2,Vector,10,NA,NA,5
+doll,1,1,Jill Valentine,10,NA,NA,5
 fairyStrat,NA,2,Illumination,10,NA,NA,NA
 fairyStrat,NA,3,Illumination,10,NA,NA,NA
 fairyBattl,NA,1,Airstrike,10,NA,NA,NA
 fairyBattl,NA,2,Airstrike,10,NA,NA,NA
 fairyBattl,NA,3,Airstrike,10,NA,NA,NA
-fairyBattl,NA,1,Rescue,10,NA,NA,NA
+fairyBattl,NA,1,Warrior,10,NA,NA,NA
 doll,4,1,M4A1,NA,10,3,NA
 doll,4,1,ST AR-15,NA,10,3,NA
 doll,4,3,Mk23,NA,NA,NA,5
-doll,4,2,G36,8,NA,NA,5
+doll,4,2,G36,10,NA,NA,5
 doll,4,1,G28,NA,NA,NA,5
 doll,3,1,SCW,NA,NA,NA,NA
 doll,5,5,G11,10,NA,NA,5
-doll,5,2,OTs-14,8,NA,NA,5
-doll,5,3,OTs-14,8,NA,NA,5
-doll,5,4,OTs-14,8,NA,NA,5
-doll,5,5,OTs-14,8,NA,NA,5
-doll,5,6,OTs-14,8,NA,NA,5
-doll,5,7,OTs-14,8,NA,NA,5
-doll,5,8,OTs-14,8,NA,NA,5
-doll,5,9,OTs-14,8,NA,NA,5
-doll,5,10,OTs-14,8,NA,NA,5
-doll,5,1,PM-06,8,NA,NA,5
+doll,5,5,OTs-14,10,NA,NA,5
+doll,5,6,OTs-14,10,NA,NA,5
+doll,5,7,OTs-14,10,NA,NA,5
+doll,5,8,OTs-14,10,NA,NA,5
+doll,5,9,OTs-14,10,NA,NA,5
+doll,5,10,OTs-14,10,NA,NA,5
+doll,5,1,PM-06,10,NA,NA,5
 doll,5,1,TAC-50,NA,NA,NA,5
-doll,5,1,Mk48,8,NA,NA,5
-doll,5,3,PK,8,NA,NA,5
+doll,5,1,Mk48,10,NA,NA,5
+doll,5,3,PK,10,NA,NA,5
 doll,5,2,IWS 2000,10,NA,NA,5
 doll,4,1,Ribeyrolles,10,NA,NA,5
 doll,4,2,Ribeyrolles,10,NA,NA,5
@@ -38,5 +36,4 @@ doll,5,2,RFB,10,NA,NA,5
 doll,4,2,G36,10,NA,NA,5
 doll,4,3,G36,10,NA,NA,5
 doll,4,1,PP-19,10,NA,NA,5
-doll,4,1,PP-19-01,10,NA,NA,5
 doll,5,1,JS 9,10,NA,NA,5
