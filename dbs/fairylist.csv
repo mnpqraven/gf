@@ -1,4 +1,5 @@
 type,rarity,dID,name,lv,slv
+fairyBattl,4,1,Anna,30,1
 fairyBattl,5,1,Golden,100,1
 fairyBattl,4,1,Rescue,80,10
 fairyBattl,4,1,Command,100,1
@@ -9,9 +10,9 @@ fairyBattl,4,1,Mortar,70,3
 fairyBattl,3,1,Sniper,40,2
 fairyBattl,3,1,Taunt,70,10
 fairyBattl,2,2,Taunt,60,10
-fairyBattl,3,1,Shield,70,5
-fairyBattl,3,1,Armor,40,4
-fairyBattl,3,1,Warrior,100,8
+fairyBattl,4,1,Shield,70,5
+fairyBattl,4,1,Armor,40,4
+fairyBattl,4,1,Warrior,100,8
 fairyBattl,1,2,Warrior,1,1
 fairyBattl,4,1,Fury,70,6
 fairyBattl,1,2,Fury,1,1
