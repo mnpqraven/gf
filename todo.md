@@ -1,9 +1,13 @@
-Rescue event:
-- [ ] 2nd carcano
-- [ ] AA12
-- [ ] 2nd contender
-- [ ] 3rd carcano
-- [ ] PP19
-- [ ] 2nd RFB
-- [ ] 3rd contender
-- [ ] 3rd RFB
+- dogs
+  - 1 basset hound
+  - 1 shiba inu
+cats
+  - 1 black cat
+  - 2 vanilla cats
+  - 2 white cat ash face
+birds
+  - 2 black owls
+  - 1 pigeon
+other
+  - 2 gecko
+  - 1 hamster

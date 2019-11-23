@@ -1,39 +1,25 @@
 type,rarity,dID,name,slvto,slv2to,modto,linkto
-doll,4,1,KLIN,10,NA,NA,5
-doll,5,2,Vector,10,NA,NA,5
-fairyStrat,NA,2,Illumination,10,NA,NA,NA
-fairyStrat,NA,3,Illumination,10,NA,NA,NA
-fairyBattl,NA,1,Airstrike,10,NA,NA,NA
-fairyBattl,NA,2,Airstrike,10,NA,NA,NA
-fairyBattl,NA,3,Airstrike,10,NA,NA,NA
-fairyBattl,NA,1,Warrior,10,NA,NA,NA
-fairyBattl,NA,1,Anna,10,NA,NA,NA
 doll,4,1,M4A1,NA,10,3,NA
 doll,4,1,ST AR-15,NA,10,3,NA
+doll,4,1,KLIN,10,NA,NA,5
 doll,4,2,G36,10,NA,NA,5
-doll,4,3,G36,10,NA,NA,5
-doll,4,1,G28,NA,NA,NA,5
-doll,3,1,SCW,NA,NA,NA,NA
-doll,5,5,G11,10,NA,NA,5
-doll,4,1,K31,10,NA,NA,5
+doll,4,2,Ribeyrolles,10,NA,NA,5
 doll,5,2,PM-06,10,NA,NA,5
-doll,5,1,TAC-50,NA,NA,NA,5
 doll,5,1,Mk48,10,NA,NA,5
 doll,5,3,PK,10,NA,NA,5
-doll,5,3,IWS 2000,10,NA,NA,5
-doll,5,4,IWS 2000,10,NA,NA,5
-doll,5,1,M200,10,NA,NA,5
-doll,4,2,Ribeyrolles,10,NA,NA,5
 doll,5,3,CarcanoM91/38,10,NA,NA,5
 doll,5,1,MDR,10,NA,NA,5
 doll,5,2,KSG,10,NA,NA,5
 doll,5,3,KSG,10,NA,NA,5
+doll,5,4,KSG,10,NA,NA,5
 doll,5,2,RFB,10,NA,NA,5
+doll,5,1,Px4 Storm,10,NA,NA,5
+doll,5,2,Px4 Storm,10,NA,NA,5
+doll,5,3,Px4 Storm,10,NA,NA,5
+doll,5,2,Contender,10,NA,NA,5
 doll,1,1,Sei P Asagiri,10,NA,NA,5
 doll,1,2,Sei P Asagiri,10,NA,NA,5
 doll,1,3,Sei P Asagiri,10,NA,NA,5
-doll,1,4,Sei P Asagiri,10,NA,NA,5
-doll,1,5,Sei P Asagiri,10,NA,NA,5
 doll,1,1,Dana Zane,10,NA,NA,5
 doll,1,1,Alma Armas,10,NA,NA,5
 doll,1,1,USAS-12,10,NA,NA,5
